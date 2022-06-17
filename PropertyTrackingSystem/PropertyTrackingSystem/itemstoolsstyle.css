@@ -1,0 +1,132 @@
+﻿/*Yung buong header sa taas na parang div*/
+body {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
+
+header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 61px;
+    background: #3B3B3B;
+}
+
+/*Yung title na Property Tracking System label component sa c#*/
+#LabelTitle {
+    position: absolute;
+    left: 3.82%;
+    top: 34.43%;
+    bottom: 36.07%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+}
+
+/*Ito yung para sa Navigation Menu na nasa gilid*/
+#navigation {
+    position: absolute;
+    width: 255px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    
+    background: #A7CAFF;
+    border-radius: 0px;
+}
+#ButtonDashboard {
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 91px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+    right: 1293px;
+    bottom: 912px;
+}
+#ButtonRequestitem {
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 137px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonItemstools{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 183px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonBorrowedhistory{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 229px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonReports{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 275px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+
+
