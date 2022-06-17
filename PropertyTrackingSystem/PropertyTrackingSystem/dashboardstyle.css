@@ -1,18 +1,33 @@
 ﻿/*Yung buong header sa taas na parang div*/
+
+#form1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+    top: 0px;
+    left: 2px;
+
+
+}
 body {
     position: relative;
     width: 1440px;
     height: 1024px;
     margin: 0px;
     background: #464646;
+    top: 0px;
+    left: 2px;
+
 }
 
 header {
     position: absolute;
-    left: 0%;
-    right: 0%;
+    left: -1%;
+    right: 1%;
     top: 0%;
-    bottom: 0%;
+    bottom: 94%;
     width: 100%;
     height: 61px;
     background: #3B3B3B;
@@ -30,6 +45,31 @@ header {
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
+
+    color: #FFFFFF;
+}
+
+
+#PanelContentview {
+    position: relative;
+    width: 120px;
+    height: 811px;
+    left: 233px;
+    top: 61px;
+}
+
+#LabelWelcome {
+    position: absolute;
+    width: 294px;
+    height: 42px;
+    left: 331px;
+    top: 85px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 42px;
 
     color: #FFFFFF;
 }

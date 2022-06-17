@@ -76,6 +76,24 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.Button ButtonReports;
         
         /// <summary>
+        /// PanelContentview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelContentview;
+        
+        /// <summary>
+        /// LabelWelcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelWelcome;
+        
+        /// <summary>
         /// LabelTitle control.
         /// </summary>
         /// <remarks>

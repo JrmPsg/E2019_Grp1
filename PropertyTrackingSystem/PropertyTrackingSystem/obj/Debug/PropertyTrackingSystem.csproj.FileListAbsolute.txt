@@ -31,3 +31,35 @@ D:\Visual Studio 2015\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsof
 D:\Visual Studio 2015\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.csprojResolveAssemblyReference.cache
 D:\Visual Studio 2015\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.dll
 D:\Visual Studio 2015\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.pdb
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\ApplicationInsights.config
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\csc.exe
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\System.Collections.Immutable.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\System.Reflection.Metadata.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\vbc.exe
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\VBCSCompiler.exe
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\roslyn\VBCSCompiler.exe.config
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\PropertyTrackingSystem.dll.config
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\PropertyTrackingSystem.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\PropertyTrackingSystem.pdb
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.Agent.Intercept.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.DependencyCollector.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.Web.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.WindowsServer.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.ApplicationInsights.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.DependencyCollector.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.Web.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.AI.WindowsServer.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.ApplicationInsights.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.dll
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.pdb
