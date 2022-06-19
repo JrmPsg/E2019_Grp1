@@ -4,14 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title> Property Tracking System </title>
-    <link rel = "stylesheet" type = "text/css" href = "dashboardstyle.css">
+    <title>Property Tracking System</title>
+    <link rel = "stylesheet" type = "text/css" href = "dashboardstyle.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-       
-      
-    <%-- Ito naman yung sa navigation sa left side gagamit ako ng panel --%>
+      <%-- Ito naman yung sa navigation sa left side gagamit ako ng unordered list ng html --%>
         <asp:Panel ID="navigation" runat="server">
             <asp:Button ID="ButtonDashboard" runat="server" Text="Dashboard" BorderStyle="None" CssClass="menubutton" OnClick="ButtonDashboard_Click" />
             <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" />
@@ -20,22 +18,10 @@
             <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" />
 
         </asp:Panel>
-       
-        <%-- Ito naman yung para dun sa mga contents sa loob ng dashboard --%>
-        <asp:Panel ID="PanelContentview" runat="server" BorderStyle="None">
-            <asp:Label ID="LabelWelcome" runat="server" Text="Welcome Home"></asp:Label>
-
-
-
-        </asp:Panel>
-          <%-- Ito yung sa header na nasa taas --%>
-       
-         <header>
+        <%-- Ito yung sa header na nasa taas --%>
+        <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
         </header>
-
-        
-        
     </form>
 </body>
 </html>

@@ -63,3 +63,4 @@ D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.Applic
 D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.dll
 D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.pdb
+D:\E2019_Grp1\PropertyTrackingSystem\PropertyTrackingSystem\obj\Debug\PropertyTrackingSystem.csprojResolveAssemblyReference.cache

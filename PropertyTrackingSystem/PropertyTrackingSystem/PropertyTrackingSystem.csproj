@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Borrowedhistory.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="dashboardstyle.css" />
     <Content Include="Reportstyle.css" />
     <Content Include="Itemstools.aspx" />
     <Content Include="Borrowedhistorystyle.css" />
@@ -113,11 +115,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dashboard.aspx" />
     <Content Include="RequestItem.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="dashboardstyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,13 @@ body {
     margin: 0px;
     background: #464646;
 }
+#form1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
 
 header {
     position: absolute;
@@ -16,6 +23,15 @@ header {
     width: 100%;
     height: 61px;
     background: #3B3B3B;
+}
+
+#PanelContent {
+    position: absolute;
+    width: 1185px;
+    height: 607px;
+    left: 255px;
+    top: 62px;
+
 }
 
 /*Yung title na Property Tracking System label component sa c#*/
@@ -128,4 +144,375 @@ header {
     border-radius: 0px 20px 20px 0px;
     color: #000000;
 }
+
+#LabelRequestform {
+    position:absolute;
+    width: 242px;
+    height: 42px;
+    left: 59px;
+    top: 33px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+
+#SectionContent {
+    position: absolute;
+    width: 1067px;
+    height: 486px;
+    left: 59px;
+    top: 99px;
+    background: rgba(88, 88, 88, 0.99);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/*
+    Borrower Info: text sa taas sa may section
+*/
+#LabelBorrowerinfo{
+    
+    position: absolute;
+    width: 215px;
+    height: 24px;
+    left: 46px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+}
+/*
+    Item info text sa taas katabi ng borrowers sa section
+*/
+#LabelIteminfo{
+    
+    position: absolute;
+    width: 168px;
+    height: 24px;
+    left: 450px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+}
+
+/*
+    Lastname Label and Textbox
+*/
+#LabelLastname {
+    position: absolute;
+    width: 86px;
+    height: 22px;
+    left: 91px;
+    top: 63px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+#TextBoxLastname{
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 90px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Requested Item label and Dropdownlist
+*/
+#LabelRequesteditem{
+    position: absolute;
+    width: 137px;
+    height: 22px;
+    left: 488px;
+    top: 63px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+#DropDownListRequesteditem{
+    position: absolute;
+    width: 509px;
+    height: 48px;
+    left: 474px;
+    top: 90px;
+
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Firstname label and textbox
+*/
+#LabelFirstname{
+    position: absolute;
+    width: 88px;
+    height: 22px;
+    left: 91px;
+    top: 167px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+#TextBoxFirstname{
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 194px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+/*
+    Item Code label and textbox component
+*/
+
+#LabelItemcode{
+    position: absolute;
+    width: 90px;
+    height: 22px;
+    left: 488px;
+    top: 167px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxItemcode{
+    position: absolute;
+    width: 347px;
+    height: 48px;
+    left: 474px;
+    top: 194px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Quantity label and dropdown list component
+*/
+#LabelQuantity{
+    position: absolute;
+    width: 85px;
+    height: 22px;
+    left: 850px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+#DropDownListQuantity{
+    position: absolute;
+    width: 141px;
+    height: 48px;
+    left: 842px;
+    top: 195px;
+
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Contact Number label and textbox component
+*/
+#LabelContactno{
+    position: absolute;
+    width: 144px;
+    height: 22px;
+    left: 91px;
+    top: 271px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+}
+#TextBoxContactno{
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 298px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+/*
+    Return Time label and calendar component
+*/
+#LabelReturntime{
+    position: absolute;
+    width: 106px;
+    height: 22px;
+    left: 485px;
+    top: 274px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+#TextBoxReturntime{
+    position: absolute;
+    width: 298px;
+    height: 48px;
+    left: 474px;
+    top: 301px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+/*
+    Trans No. label and textbox component
+*/
+#LabelTransno{
+    position: absolute;
+    width: 83px;
+    height: 22px;
+    left: 812px;
+    top: 274px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+#TextBoxTransno{
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    left: 793px;
+    top: 301px;
+
+    background: rgba(138, 138, 138, 0.18);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Request Button component
+*/
+#ButtonRequest{
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    left: 582px;
+    top: 392px;
+
+    background: rgba(255, 255, 255, 0.84);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Cancel Button component
+*/
+#ButtonCancel{
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    left: 793px;
+    top: 392px;
+
+    background: rgba(0, 0, 0, 0.42);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color:white;
+}
+
 
