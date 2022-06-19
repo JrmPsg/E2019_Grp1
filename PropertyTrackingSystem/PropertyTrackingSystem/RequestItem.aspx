@@ -19,12 +19,11 @@
 
         </asp:Panel>
 
-
         <%-- Ito yung sa header na nasa taas --%>
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
         </header>
-        <asp:Panel ID="PanelContent" runat="server">
+        
             <asp:Label ID="LabelRequestform" runat="server" Text="Request Form"></asp:Label>
 
             <%-- Dito sa section content ko ipapasok yung mga need natin dun sa form na yun similar ang section sa div pero mas gusto ko div makabago ehh--%>
@@ -35,35 +34,35 @@
 
                 <%-- Lastname label and textbox component --%>
                 <asp:Label ID="LabelLastname" runat="server" Text="Lastname"></asp:Label>
-                <asp:TextBox ID="TextBoxLastname" runat="server" ForeColor="White" BorderColor="White" BorderStyle="None"></asp:TextBox>
+                <asp:TextBox ID="TextBoxLastname" runat="server"></asp:TextBox>
 
                 <%-- Requested Item label and drop down list component --%>
                 <asp:Label ID="LabelRequesteditem" runat="server" Text="Requested Item"></asp:Label>
-                <asp:DropDownList ID="DropDownListRequesteditem" runat="server" ForeColor="White"></asp:DropDownList>
+                <asp:DropDownList ID="DropDownListRequesteditem" runat="server"></asp:DropDownList>
 
                 <%-- Firstname label and textbox component --%>
                 <asp:Label ID="LabelFirstname" runat="server" Text="Firstname"></asp:Label>
-                <asp:TextBox ID="TextBoxFirstname" runat="server" ForeColor="White"></asp:TextBox>
+                <asp:TextBox ID="TextBoxFirstname" runat="server"></asp:TextBox>
 
                 <%-- Item code label and textbox component --%>
                 <asp:Label ID="LabelItemcode" runat="server" Text="Item Code"></asp:Label>
-                <asp:TextBox ID="TextBoxItemcode" runat="server" ForeColor="White"></asp:TextBox>
+                <asp:TextBox ID="TextBoxItemcode" runat="server"></asp:TextBox>
 
                 <%-- Quantity label and dropdown component --%>
                 <asp:Label ID="LabelQuantity" runat="server" Text="Quantity*"></asp:Label>
-                <asp:DropDownList ID="DropDownListQuantity" runat="server" ForeColor="White"></asp:DropDownList>
+                <asp:DropDownList ID="DropDownListQuantity" runat="server"></asp:DropDownList>
                 
                 <%-- Contact No. label and textbox component --%>
                 <asp:Label ID="LabelContactno" runat="server" Text="Contact No."></asp:Label>
-                <asp:TextBox ID="TextBoxContactno" runat="server" ForeColor="White"></asp:TextBox>
+                <asp:TextBox ID="TextBoxContactno" runat="server"></asp:TextBox>
 
                 <%-- Return Time label and calendar component --%>
                 <asp:Label ID="LabelReturntime" runat="server" Text="Return Time"></asp:Label>
-                <asp:TextBox ID="TextBoxReturntime" runat="server" TextMode ="DateTimeLocal" ForeColor="White"></asp:TextBox>
+                <asp:TextBox ID="TextBoxReturntime" runat="server" TextMode ="DateTimeLocal"></asp:TextBox>
 
                 <%-- Trans No. label and textbox component --%>
                 <asp:Label ID="LabelTransno" runat="server" Text="Trans No."></asp:Label>
-                <asp:TextBox ID="TextBoxTransno" runat="server" ForeColor="White"></asp:TextBox>
+                <asp:TextBox ID="TextBoxTransno" runat="server"></asp:TextBox>
 
                 <%-- Request Button component--%>
                 <asp:Button ID="ButtonRequest" runat="server" Text="Request" />
@@ -71,7 +70,7 @@
                 <%-- Cancel Button component --%>
                 <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" />
             </section>
-        </asp:Panel>
+      
     </form>
 </body>
 </html>
