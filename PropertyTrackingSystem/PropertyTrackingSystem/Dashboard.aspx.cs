@@ -28,7 +28,7 @@ namespace PropertyTrackingSystem
         //Para dun sa items / tools button
         protected void ButtonItemstools_Click(object sender, EventArgs e)
         {
-            ButtonItemstools.PostBackUrl = "Itemstools.aspx";
+            ButtonItemstools.PostBackUrl = "Itemstoolsmain.aspx";
         }
 
         //Para dun sa borrowed history button
