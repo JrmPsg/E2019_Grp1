@@ -34,16 +34,17 @@
 
         <%-- Table na need natin hayyyy buhayyyyyyyyyyyyyyyyy --%>
         <div id ="tablecontainer">
-            <asp:GridView ID="GridViewTables" runat="server" CssClass ="gridview" AutoGenerateColumns ="false" Visible ="true" Height="27px" OnSelectedIndexChanged="GridViewTables_SelectedIndexChanged" Width="833px">
+            <asp:GridView ID="GridViewTables" runat="server" CssClass ="gridview" AutoGenerateColumns ="False" Height="27px" Width="833px" DataKeyNames="Item Code" DataSourceID="SqlDataSourceGrid">
                 <Columns>
-                    <asp:BoundField HeaderText ="No." />
-                    <asp:BoundField HeaderText ="Item Code" />
-                    <asp:BoundField HeaderText ="Item Name" />
-                    <asp:BoundField HeaderText ="Quantity" />
-                    <asp:BoundField HeaderText ="Date Purchase" />
-                    <asp:BoundField HeaderText ="Departments" />
+                    <asp:BoundField DataField="No" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="No" />
+                    <asp:BoundField DataField="Item Code" HeaderText ="Item Code" ReadOnly="True" SortExpression="Item Code" />
+                    <asp:BoundField DataField="Item Name" HeaderText ="Item Name" SortExpression="Item Name" />
+                    <asp:BoundField DataField="Quantity" HeaderText ="Quantity" SortExpression="Quantity" />
+                    <asp:BoundField Datafield="Date Purchase" HeaderText ="Date Purchase" DataFormatString="{0:MM/dd/yyyy}" SortExpression="Date Purchase" />
+                    <asp:BoundField DataField="Department" HeaderText ="Department" SortExpression="Department" />
                 </Columns>
             </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSourceGrid" runat="server" ConnectionString="<%$ ConnectionStrings:PropertyConnectionString %>" SelectCommand="SELECT * FROM [Table_item]"></asp:SqlDataSource>
         </div>
     </form>
 </body>

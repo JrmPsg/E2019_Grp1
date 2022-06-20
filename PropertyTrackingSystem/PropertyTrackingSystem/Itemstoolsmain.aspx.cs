@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.Configuration;
 
 namespace PropertyTrackingSystem
 {
@@ -12,7 +15,8 @@ namespace PropertyTrackingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter tableItemInfo = new SqlDataAdapter("SELECT * FROM Table_items", );
+            
+            
         }
         //Para dun sa dashboard button
         protected void ButtonDashboard_Click(object sender, EventArgs e)
@@ -44,9 +48,10 @@ namespace PropertyTrackingSystem
             ButtonReports.PostBackUrl = "Report.aspx";
         }
 
-        protected void GridViewTables_SelectedIndexChanged(object sender, EventArgs e)
+        private void gridData()
         {
-
+           
         }
+        
     }
 }
