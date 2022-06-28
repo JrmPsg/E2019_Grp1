@@ -97,6 +97,11 @@
     <Content Include="Borrowedhistory.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dashboardstyle.css" />
+    <Content Include="Image\add.png" />
+    <Content Include="Image\close.png" />
+    <Content Include="Image\delete.png" />
+    <Content Include="Image\save.png" />
+    <Content Include="Image\update.png" />
     <Content Include="Itemstoolsmain.aspx" />
     <Content Include="Itemstoolsmainstyle.css" />
     <Content Include="Reportstyle.css" />

@@ -188,20 +188,28 @@ header {
 
 #tablecontainer{
     position:absolute;
-    width: 832px;
+    width: 909px;
     height: 500px;
     left: 285px;
     top: 175px;
 }
-#GridviewTables{
+#GridViewTables{
     position:absolute;
-    width: 833px;
-    left: 285px;
-    top: 175px;
+    width: 891px;
+    height: 500px;
+    top: 0px;
+    left: 0px;
 }
+
+/*
 .gridview td{
-    padding:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
 }
 .gridview th{
-    padding:10px;
-}
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+
+}*/

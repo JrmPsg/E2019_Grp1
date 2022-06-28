@@ -6,9 +6,6 @@
 <head runat="server">
      <title>Property Tracking System</title>
      <link rel = "stylesheet" type = "text/css" href = "Itemstoolsmainstyle.css"/>
-     <style type="text/css">
-         .gridview {}
-     </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -32,19 +29,99 @@
         <asp:Label ID="LabelSearch" runat="server" Text="Search Item"></asp:Label>
         <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
 
+       
         <%-- Table na need natin hayyyy buhayyyyyyyyyyyyyyyyy --%>
         <div id ="tablecontainer">
-            <asp:GridView ID="GridViewTables" runat="server" CssClass ="gridview" AutoGenerateColumns ="False" Height="27px" Width="833px" DataKeyNames="Item Code" DataSourceID="SqlDataSourceGrid">
+           
+            <asp:GridView ID="GridViewTables" 
+                runat="server" 
+                CssClass ="gridview" 
+                AutoGenerateColumns ="False" 
+                Height="27px" 
+                DataKeyNames="No"
+                ShowFooter="true"
+                ShowHeaderWhenEmpty="true" 
+                OnRowCommand="GridViewTables_RowCommand"
+                OnRowEditing="GridViewTables_RowEditing"
+                OnRowCancelingEdit="GridViewTables_RowCancelingEdit"
+                OnRowUpdating="GridViewTables_RowUpdating"
+                OnRowDeleting="GridViewTables_RowDeleting"
+                >
+
+                <%-- Yung mga columns na need natin sa table na similar sa database natin --%>
                 <Columns>
-                    <asp:BoundField DataField="No" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="No" />
-                    <asp:BoundField DataField="Item Code" HeaderText ="Item Code" ReadOnly="True" SortExpression="Item Code" />
-                    <asp:BoundField DataField="Item Name" HeaderText ="Item Name" SortExpression="Item Name" />
-                    <asp:BoundField DataField="Quantity" HeaderText ="Quantity" SortExpression="Quantity" />
-                    <asp:BoundField Datafield="Date Purchase" HeaderText ="Date Purchase" DataFormatString="{0:MM/dd/yyyy}" SortExpression="Date Purchase" />
-                    <asp:BoundField DataField="Department" HeaderText ="Department" SortExpression="Department" />
+                    <%-- Item Code --%>
+                    <asp:TemplateField HeaderText="Item Code">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("itemcode") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtItemCode" runat="server" Text='<%#Eval("itemcode") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                             <asp:TextBox ID="txtItemCodeFooter" runat="server"></asp:TextBox>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <%-- Item Name --%>
+                    <asp:TemplateField HeaderText="Item Name">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("itemname") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtItemName" runat="server" Text='<%#Eval("itemname") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                             <asp:TextBox ID="txtItemNameFooter" runat="server"></asp:TextBox>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <%-- Quantity --%> 
+                   <asp:TemplateField HeaderText="Quantity">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("quantity") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtQuantity" runat="server" Text='<%#Eval("quantity") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                             <asp:TextBox ID="txtQuantityFooter" runat="server"></asp:TextBox>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <%-- Department --%>
+                    <asp:TemplateField HeaderText="Department">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("department") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtDepartment" runat="server" Text='<%#Eval("department") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                             <asp:TextBox ID="txtDepartmentFooter" runat="server"></asp:TextBox>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <%-- Yung mga buttons --%>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:ImageButton ImageUrl="~/Image/update.png" CommandName="Edit" ToolTip="Edit" runat="server"/>
+                            <asp:ImageButton ImageUrl="~/Image/delete.png" CommandName="Delete" ToolTip="Delete" runat="server"/>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:ImageButton ImageUrl="~/Image/save.png" CommandName="Update" ToolTip="Update" runat="server"/>
+                            <asp:ImageButton ImageUrl="~/Image/close.png" CommandName="Cancel" ToolTip="Cancel" runat="server"/>
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                            <asp:ImageButton ImageUrl="~/Image/add.png" CommandName="Addnew" ToolTip="Add" runat="server"/>
+                        </FooterTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSourceGrid" runat="server" ConnectionString="<%$ ConnectionStrings:PropertyConnectionString %>" SelectCommand="SELECT * FROM [Table_item]"></asp:SqlDataSource>
+            <br />
+            <%-- Error or success messages dito ko nalang lagay para di hassle hayyy --%>
+            <asp:Label ID="LabelError" runat="server" ForeColor="#ff0000"></asp:Label>
+            <asp:Label ID="LabelSuccess" runat="server" ForeColor="#009900"></asp:Label>
         </div>
     </form>
 </body>
