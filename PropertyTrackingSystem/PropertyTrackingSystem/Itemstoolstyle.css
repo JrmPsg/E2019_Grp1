@@ -179,10 +179,10 @@ header {
     left: 891px;
     top: 91px;
 
+    color:#FFFFFF;
     padding-left:20px;
     box-sizing:border-box;
-    background: #747474;
-    opacity: 0.2;
+    background: #3B3B3B;
     border-radius: 20px;
 }
 

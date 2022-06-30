@@ -399,9 +399,9 @@ header {
 }
 
 /*
-    Contact Number label and textbox component
+    ID number label and textbox component
 */
-#LabelContactno{
+#LabelId {
     position: absolute;
     width: 144px;
     height: 22px;
@@ -415,10 +415,11 @@ header {
     line-height: 22px;
     /* identical to box height */
 
+
     color: #FFFFFF;
 
 }
-#TextBoxContactno{
+#TextBoxId {
     position: absolute;
     width: 326px;
     height: 48px;
@@ -431,6 +432,7 @@ header {
     background: rgba(138, 138, 138, 0.18);
     border-color:transparent;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    box-sizing:border-box;
     border-radius: 15px;
 }
 
@@ -506,6 +508,29 @@ header {
     border-color:transparent;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+}
+
+/*
+    Not Yet Registered Hyperlink Component
+*/
+
+#HyperLink {
+    position: absolute;
+    width: 133px;
+    height: 17px;
+    left: 91px;
+    top: 410px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
 }
 
 /*

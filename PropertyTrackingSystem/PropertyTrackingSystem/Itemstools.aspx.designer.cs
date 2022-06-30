@@ -10,7 +10,7 @@
 namespace PropertyTrackingSystem {
     
     
-    public partial class Itemstools {
+    public partial class Itemstoolsmain {
         
         /// <summary>
         /// form1 control.
@@ -85,183 +85,57 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.Label LabelTitle;
         
         /// <summary>
-        /// LabelNewitem control.
+        /// LabelItemsinfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNewitem;
+        protected global::System.Web.UI.WebControls.Label LabelItemsinfo;
         
         /// <summary>
-        /// LabelIteminfo control.
+        /// LabelSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelIteminfo;
+        protected global::System.Web.UI.WebControls.Label LabelSearch;
         
         /// <summary>
-        /// LabelItemname control.
+        /// TextBoxSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelItemname;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
         
         /// <summary>
-        /// TextBoxItemname control.
+        /// GridViewTables control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxItemname;
+        protected global::System.Web.UI.WebControls.GridView GridViewTables;
         
         /// <summary>
-        /// LabelBrandname control.
+        /// LabelError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelBrandname;
+        protected global::System.Web.UI.WebControls.Label LabelError;
         
         /// <summary>
-        /// TextBoxBrandname control.
+        /// LabelSuccess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxBrandname;
-        
-        /// <summary>
-        /// LabelDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDepartment;
-        
-        /// <summary>
-        /// TextBoxDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDepartment;
-        
-        /// <summary>
-        /// LabelManufacturer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelManufacturer;
-        
-        /// <summary>
-        /// TextBoxManufacturer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxManufacturer;
-        
-        /// <summary>
-        /// LabelQuantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelQuantity;
-        
-        /// <summary>
-        /// DropDownListQuantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListQuantity;
-        
-        /// <summary>
-        /// LabelItemcode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelItemcode;
-        
-        /// <summary>
-        /// TextBoxItemcode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxItemcode;
-        
-        /// <summary>
-        /// LabelPurchasedate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPurchasedate;
-        
-        /// <summary>
-        /// TextBoxPurchasedate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPurchasedate;
-        
-        /// <summary>
-        /// LabelItemcost control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelItemcost;
-        
-        /// <summary>
-        /// TextBoxItemcost control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxItemcost;
-        
-        /// <summary>
-        /// ButtonAdditem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAdditem;
-        
-        /// <summary>
-        /// ButtonCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCancel;
+        protected global::System.Web.UI.WebControls.Label LabelSuccess;
     }
 }

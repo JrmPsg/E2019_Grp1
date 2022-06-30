@@ -18,10 +18,7 @@ namespace PropertyTrackingSystem
         string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                dropdownData();
-            }
+
         }
 
         //Para dun sa dashboard button
@@ -53,7 +50,50 @@ namespace PropertyTrackingSystem
         {
             ButtonReports.PostBackUrl = "Report.aspx";
         }
-       
+
+        //Dito itong function na ito ay para sana sa dropdownlist ng requested item as long as may item dun then ayun makakapagselect ng item 
+        //then kuhanin ang similar rows sa database then ipopulate or ifill ang textbox with the similar row sana gumana ito para di hassle magtype sa textbox
+        //Pag gumana ito imark ko as readonly ang mga textbox boommmm panessss
+        public void selectItemDetail()
+        {
+            try
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                {
+
+                    sqlCon.Open(); //Open ang ating connection sa ating database
+                    SqlCommand sqlCmd = new SqlCommand(); //Pangquery natin imbes na sa string variable dito nalang diretso
+
+                    sqlCmd.Connection = sqlCon; //Then yung connection lagay dito para may magamit si sqlCmd pwede din diretso sa dataset na gagamitin ko as parameter 2 I think
+
+                    int selecteditem = Convert.ToInt32(DropDownListRequesteditem.SelectedValue); //Since ang dropdownlist naman ay kada index may value kinuha ko nalang yung id nila
+
+                    //Ito namang yung query natin though pwedeng string ang gamitin dito nalang din itemcode and quantity ang need ko pero try ko muna siya sa ating itemcode
+                    sqlCmd.CommandText = "SELECT itemcode FROM tb_items WHERE itemname = " + selecteditem; //Since item name ang nasa mga dropdown natin sanaaaa makuha ko muna silaa lolll
+
+                    //Then ang sql data adapter
+                    SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCmd);
+
+                    //Then ang dataset
+                    DataSet ds = new DataSet();
+
+                    sqlDa.Fill(ds); //Since nakuha ni sql data adapter ang mga values base sa query ififill natin ngayon si dataset and yeah isang index lang siya
+
+                    //Then ang ating mga Textbox ipapasok natin ang mga value
+                    TextBoxItemcode.Text = ds.Tables[0].Rows[0]["itemcode"].ToString(); //Yung item code na need natin hahahaa
+
+                    //Then yung quantity na drop down list ipopulate ko yung ano ahhhh quantity ahahhahahahhahahaha
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         //Ifill or populate muna natin yung dropdownlist na yun hahhahahha hayyyyyyyy buhayyyyyyyy whoooooo need ko magmeryendaaa gusto ko meryendaaaaaa
         public void dropdownData()
         {
@@ -81,43 +121,5 @@ namespace PropertyTrackingSystem
             }
         }
 
-        //Dito itong function na ito ay para sana sa dropdownlist ng requested item as long as may item dun then ayun makakapagselect ng item 
-        //then kuhanin ang similar rows sa database then ipopulate or ifill ang textbox with the similar row sana gumana ito para di hassle magtype sa textbox
-        //Pag gumana ito imark ko as readonly yung item code textbox boommmm panessss
-        protected void DropDownListRequesteditem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selecteditemDetail(); //Dito ko ito ipapasok para all goods ahahhahahah
-        }
-
-        public void selecteditemDetail()
-        {
-            try
-            {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
-                {
-                    sqlCon.Open(); //Buksan ang connection
-
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = sqlCon;
-
-                    int itemNo = Convert.ToInt32(DropDownListRequesteditem.SelectedValue); //Since ang value ay yung No natin macoconvert ko siya
-
-                    cmd.CommandText = "SELECT itemcode FROM tb_items WHERE No= " + itemNo;
-
-                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    adapt.Fill(ds); //Fill natin ang dataset
-
-                    //Then yung mga textbox natin
-                    TextBoxItemcode.Text = ds.Tables[0].Rows[0]["itemcode"].ToString();
-
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
     }
 }

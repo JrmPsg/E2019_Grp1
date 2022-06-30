@@ -102,12 +102,12 @@
     <Content Include="Image\delete.png" />
     <Content Include="Image\save.png" />
     <Content Include="Image\update.png" />
-    <Content Include="Itemstoolsmain.aspx" />
-    <Content Include="Itemstoolsmainstyle.css" />
-    <Content Include="Reportstyle.css" />
     <Content Include="Itemstools.aspx" />
+    <Content Include="Itemstoolstyle.css" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Registrationstyle.css" />
+    <Content Include="Reportstyle.css" />
     <Content Include="Borrowedhistorystyle.css" />
-    <Content Include="itemstoolsstyle.css" />
     <Content Include="Report.aspx" />
     <Content Include="requestitemstyle.css" />
     <Content Include="packages.config" />
@@ -149,14 +149,14 @@
     <Compile Include="Itemstools.aspx.designer.cs">
       <DependentUpon>Itemstools.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Itemstoolsmain.aspx.cs">
-      <DependentUpon>Itemstoolsmain.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Itemstoolsmain.aspx.designer.cs">
-      <DependentUpon>Itemstoolsmain.aspx</DependentUpon>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
