@@ -36,17 +36,18 @@ header {
 /*Yung title na Property Tracking System label component sa c#*/
 #LabelTitle {
     position: absolute;
-    left: 3.82%;
-    top: 34.43%;
-    bottom: 36.07%;
+    left: 3%;
+    top: 33%;
+    bottom: 34%;
 
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
 
     color: #FFFFFF;
+    width: 171px;
 }
 
 /*Ito yung para sa Navigation Menu na nasa gilid*/
@@ -67,7 +68,7 @@ header {
     left: 0px;
     top: 91px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 800;
     font-size: 17px;
@@ -86,7 +87,7 @@ header {
     left: 0px;
     top: 137px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -102,7 +103,7 @@ header {
     left: 0px;
     top: 183px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -118,7 +119,7 @@ header {
     left: 0px;
     top: 229px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -134,7 +135,7 @@ header {
     left: 0px;
     top: 275px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -142,5 +143,223 @@ header {
     /* identical to box height */
     border-radius: 0px 20px 20px 0px;
     color: #000000;
+}
+#LabelWelcome{
+    position: absolute;
+    width: 550px;
+    height: 42px;
+    left: 331px;
+    top: 85px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+#PanelItem{
+    position: absolute;
+    width: 488.1px;
+    height: 331px;
+    left: 333px;
+    top: 156px;
+
+    background: #C3FFB9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14.8209px;
+}
+#PanelBorrowedItem{
+    position: absolute;
+    width: 488.1px;
+    height: 331px;
+    left: 857px;
+    top: 152px;
+
+    background: #F6FF90;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 14.8209px;
+}
+#PanelReturnedItem{
+    position: absolute;
+    width: 488.1px;
+    height: 331px;
+    left: 333px;
+    top: 514px;
+
+    background: #A2BAF9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14.8209px;
+}
+#PanelBorrower{
+    position: absolute;
+    width: 488.1px;
+    height: 331px;
+    left: 857px;
+    top: 514px;
+
+    background: #FF9191;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 14.8209px;
+}
+#LabelTotalItem{
+    position: absolute;
+    width: 420px;
+    height: 33px;
+    left: 34px;
+    top: 27px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27.1167px;
+    line-height: 33px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+#LabelNumItems{
+    position: absolute;
+    width: 162px;
+    height: 145px;
+    left: 50px;
+    top: 90px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 145px;
+    text-align: center;
+
+    color: #000000;
+}
+#LabelTotalBorrowedItem{
+    position: absolute;
+    width: 420px;
+    height: 33px;
+    left: 34px;
+    top: 27px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27.1167px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #000000;
+}
+#LabelNumBorrowedItem{
+    position: absolute;
+    width: 162px;
+    height: 145px;
+    left: 50px;
+    top: 90px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 145px;
+    text-align: center;
+
+    color: #000000;
+}
+#LabelTotalReturned{
+    position: absolute;
+    width: 420px;
+    height: 36px;
+    left: 34px;
+    top: 27px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
+#LabelNumReturned{
+    position: absolute;
+    width: 162px;
+    height: 145px;
+    left: 50px;
+    top: 90px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 145px;
+    text-align: center;
+
+    color: #000000;
+}
+#LabelTotalBorrower{
+    position: absolute;
+    width: 420px;
+    height: 33px;
+    left: 34px;
+    top: 27px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27.1167px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #000000;
+}
+#LabelNumBorrower{
+    position: absolute;
+    width: 162px;
+    height: 145px;
+    left: 50px;
+    top: 90px;
+
+    font-family:'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 145px;
+    text-align: center;
+
+    color: #000000;
+}
+#Image1{
+    position: absolute;
+    width: 184.52px;
+    height: 172.76px;
+    left: 255px;
+    top: 68px;
+}
+#Image2{
+    position: absolute;
+    width: 225px;
+    height: 142.63px;
+    left: 219px;
+    top: 91.37px;
+}
+#Image3{
+    position: absolute;
+    width: 237.65px;
+    height: 177.07px;
+    left: 213px;
+    top: 68px;
+}
+#Image4{
+    position: absolute;
+    width: 162px;
+    height: 182.76px;
+    left: 268px;
+    top: 74px;
 }
 

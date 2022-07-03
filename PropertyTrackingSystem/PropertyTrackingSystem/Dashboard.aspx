@@ -22,6 +22,32 @@
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
         </header>
+
+        <asp:Label ID="LabelWelcome" runat="server" Text="Welcome Home"></asp:Label>
+
+        <asp:Panel ID="PanelItem" runat="server">
+            <asp:Label ID="LabelTotalItem" runat="server" Text="Total Item / Tool"></asp:Label>
+            <asp:Label ID="LabelNumItems" runat="server" Text="0"></asp:Label>
+            <asp:Image ID="Image1" ImageUrl="~/Image/1.png" runat="server" />
+        </asp:Panel>
+
+        <asp:Panel ID="PanelBorrowedItem" runat="server">
+            <asp:Label ID="LabelTotalBorrowedItem" runat="server" Text="Total Borrowed Item"></asp:Label>
+            <asp:Label ID="LabelNumBorrowedItem" runat="server" Text="11"></asp:Label>
+            <asp:Image ID="Image2" ImageUrl="~/Image/2.png" runat="server" />
+        </asp:Panel>
+
+        <asp:Panel ID="PanelReturnedItem" runat="server">
+            <asp:Label ID="LabelTotalReturned" runat="server" Text="Total Returned Item"></asp:Label>
+            <asp:Label ID="LabelNumReturned" runat="server" Text="22"></asp:Label>
+            <asp:Image ID="Image3" ImageUrl="~/Image/3.png" runat="server" />
+        </asp:Panel>
+
+        <asp:Panel ID="PanelBorrower" runat="server">
+            <asp:Label ID="LabelTotalBorrower" runat="server" Text="Total Borrower"></asp:Label>
+            <asp:Label ID="LabelNumBorrower" runat="server" Text="48"></asp:Label>
+            <asp:Image ID="Image4" ImageUrl="~/Image/4.png" runat="server" />
+        </asp:Panel>
     </form>
 </body>
 </html>
