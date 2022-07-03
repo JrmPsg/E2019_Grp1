@@ -1,12 +1,18 @@
-﻿/*Yung buong header sa taas na parang div*/
+﻿/*And yes ito na nga yung sa ating mga css codes*/
 body {
     position: relative;
     width: 1440px;
     height: 1024px;
     margin: 0px;
-    background: #464646;
+    background: #FFFFFF;
 }
-
+#form1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #FFFFFF;
+}
 header {
     position: absolute;
     left: 0%;
@@ -127,5 +133,78 @@ header {
     /* identical to box height */
     border-radius: 0px 20px 20px 0px;
     color: #000000;
+}
+
+/*
+    Recent Transactions Label component
+*/
+#LabelRecenttransactions {
+    position: absolute;
+    width: 199px;
+    height: 24px;
+    left: 271px;
+    top: 93px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+/*
+    Search transaction number Label and Textbox component
+*/
+#LabelSearch {
+    position: absolute;
+    width: 126px;
+    height: 18px;
+    left: 757px;
+    top: 97px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+
+}
+
+#TextBoxSearch {
+    position: absolute;
+    width: 203px;
+    height: 31px;
+    left: 891px;
+    top: 91px;
+    
+    color:#FFFFFF;
+    background: #3B3B3B;
+    opacity: 0.2;
+    border-radius: 20px;
+}
+
+/*
+    Div Table container natin na magcecenter sa ating gridview
+*/
+
+#tablecontainer{
+    position:absolute;
+    width: 1000px;
+    height: 500px;
+    left: 285px;
+    top: 175px;
+}
+
+#GridViewBorrowHistory{
+    position:absolute;
+    width: 993px;
+    height: 315px;
+    left: 3px;
+    top: -1px;
+    right: 4px;
 }
 

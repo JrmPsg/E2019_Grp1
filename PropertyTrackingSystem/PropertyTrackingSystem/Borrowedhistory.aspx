@@ -22,6 +22,76 @@
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
         </header>
+
+        <%-- Recent Transactions Label --%>
+        <asp:Label ID="LabelRecenttransactions" runat="server" Text="Recent Transactions"></asp:Label>
+
+        <%-- Search Transaction No Label and Textbox--%>
+        <asp:Label ID="LabelSearch" runat="server" Text="Search Trans No"></asp:Label>
+        <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
+
+        <%-- Next is yung gridview na nasa loob ng div container kasi di ko magitna ang gridview pag walang div container --%>
+
+        <div id="tablecontainer">
+            <%-- Mga columns na need natin sa ating gridview na similar sa ating database --%>
+            <asp:GridView 
+                ID="GridViewBorrowHistory" 
+                runat="server" 
+                AutoGenerateColumns="false"
+                Height="27px"
+                DataKeyNames="transno"
+                ShowHeaderWhenEmpty="true" 
+                OnRowEditing="GridViewBorrowHistory_RowEditing"
+                OnRowCancelingEdit="GridViewBorrowHistory_RowCancelingEdit"
+                OnRowUpdating="GridViewBorrowHistory_RowUpdating"
+                OnRowDeleting="GridViewBorrowHistory_RowDeleting"
+                >
+                <Columns>
+                <%-- Transaction Number boundfield--%>
+                    <asp:BoundField DataField="transno" HeaderText="Transaction No"/>
+
+                <%-- Borrower ID boundfield--%>
+                    <asp:BoundField DataField="borrowerid" HeaderText="Borrower ID"/>
+
+                <%-- Item Borrowed boundfield--%>
+                    <asp:BoundField DataField="itemborrowed" HeaderText="Item Borrowed"/>
+
+                <%-- Quantity boundfield --%>
+                    <asp:BoundField DataField="quantity" HeaderText="Quantity"/>
+
+                <%-- Date Borrowed boundfield--%>
+                    <asp:BoundField DataField="date_borrowed" HeaderText="Date Borrowed"/>
+
+                <%-- Date Return boundfield--%>
+                    <asp:BoundField DataField="date_return" HeaderText="Expected Return"/>
+
+                <%-- Returned? dropdown item template field--%>
+                    <asp:TemplateField HeaderText="Returned">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("is_returned") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="DropDownReturn" runat="server">
+                                <asp:ListItem Value="false">false</asp:ListItem>
+                                <asp:ListItem Value="true">true</asp:ListItem>
+                            </asp:DropDownList>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+
+                <%-- Template field para sa ating mga image button for edit item template --%>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:ImageButton ImageUrl="~/Image/update.png" CommandName="Edit" ToolTip="Edit" runat="server"/>
+                            <asp:ImageButton ImageUrl="~/Image/delete.png" CommandName="Delete" ToolTip="Delete" runat="server"/>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:ImageButton ImageUrl="~/Image/save.png" CommandName="Update" ToolTip="Update" runat="server"/>
+                            <asp:ImageButton ImageUrl="~/Image/close.png" CommandName="Cancel" ToolTip="Cancel" runat="server"/>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>

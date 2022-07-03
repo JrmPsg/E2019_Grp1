@@ -130,6 +130,15 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListRequesteditem;
         
         /// <summary>
+        /// requesteditemValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requesteditemValidator;
+        
+        /// <summary>
         /// LabelLastname control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxLastname;
+        
+        /// <summary>
+        /// lastnameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator lastnameValidator;
         
         /// <summary>
         /// LabelItemcode control.
@@ -166,6 +184,15 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.TextBox TextBoxItemcode;
         
         /// <summary>
+        /// itemcodeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator itemcodeValidator;
+        
+        /// <summary>
         /// LabelQuantity control.
         /// </summary>
         /// <remarks>
@@ -182,6 +209,15 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListQuantity;
+        
+        /// <summary>
+        /// listquantityValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator listquantityValidator;
         
         /// <summary>
         /// LabelId control.
@@ -202,6 +238,15 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.TextBox TextBoxId;
         
         /// <summary>
+        /// idValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator idValidator;
+        
+        /// <summary>
         /// LabelFirstname control.
         /// </summary>
         /// <remarks>
@@ -218,6 +263,15 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxFirstname;
+        
+        /// <summary>
+        /// firstnameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator firstnameValidator;
         
         /// <summary>
         /// LabelReturntime control.
@@ -238,6 +292,15 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.TextBox TextBoxReturntime;
         
         /// <summary>
+        /// returntimeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator returntimeValidator;
+        
+        /// <summary>
         /// LabelTransno control.
         /// </summary>
         /// <remarks>
@@ -254,6 +317,15 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxTransno;
+        
+        /// <summary>
+        /// transnoValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator transnoValidator;
         
         /// <summary>
         /// HyperLink control.

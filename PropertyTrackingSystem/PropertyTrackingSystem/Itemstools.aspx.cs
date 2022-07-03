@@ -55,6 +55,7 @@ namespace PropertyTrackingSystem
             ButtonReports.PostBackUrl = "Report.aspx";
         }
 
+        //Automatic magfill ang ating gridview
         public void gridData()
         {
             DataTable dtbl = new DataTable();
@@ -126,6 +127,7 @@ namespace PropertyTrackingSystem
             gridData();
         }
 
+        //Cancel ang edit
         protected void GridViewTables_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridViewTables.EditIndex = -1;

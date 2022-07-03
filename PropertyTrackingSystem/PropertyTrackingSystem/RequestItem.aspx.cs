@@ -100,23 +100,145 @@ namespace PropertyTrackingSystem
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = sqlCon;
 
-                    int itemNo = Convert.ToInt32(DropDownListRequesteditem.SelectedValue); //Since ang value ay yung No natin macoconvert ko siya
+                    int itemNo = Convert.ToInt32(DropDownListRequesteditem.SelectedValue); //Since ang value ay yung No natin macoconvert ko siya kasi dapat int siya sa database
 
-                    cmd.CommandText = "SELECT itemcode FROM tb_items WHERE No= " + itemNo;
+                    cmd.CommandText = "SELECT itemcode,quantity FROM tb_items WHERE No= " + itemNo;
 
                     SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adapt.Fill(ds); //Fill natin ang dataset
 
                     //Then yung mga textbox natin
-                    TextBoxItemcode.Text = ds.Tables[0].Rows[0]["itemcode"].ToString();
+                    TextBoxItemcode.Text = ds.Tables[0].Rows[0]["itemcode"].ToString(); //Item Code
 
+                    //Also yung quantity na dropdownlist
+                    //Kuhanin ang max value natin then magloloop tayo papasok sa ating dropdownlist
+                    int q = Convert.ToInt32(ds.Tables[0].Rows[0]["quantity"]); //So using convert macoconvert ko ang value ng quantity to integer which is annoying talaga ahahha
+                    DropDownListQuantity.Items.Clear(); //Clear muna natin lahat to prevent appending sa previous na ano ahhh items ahahahha
+                    DropDownListQuantity.Items.Insert(0, new ListItem("--Select Items--", "0"));
+
+                    //Kung equal siya sa zero edi lugi out of stock ganunnn
+                    //Since may select items dun ako nilagay subukan ko siya imanipulate as in update
+                    if (q==0)
+                    {
+                        DropDownListQuantity.Items.Clear();
+                        DropDownListQuantity.Items.Insert(0, new ListItem("--Out of Stock","0"));
+                    }
+                    else
+                    {
+                        for (int i = 1; i <= q; i++)
+                        {
+                            //So bale ang logic ko is ipasok ang laman sa ating dropdownlist gamit ito value
+                            DropDownListQuantity.Items.Insert(i, new ListItem(i.ToString(), i.ToString()));
+
+                        }
+                    }
                 }
             }
             catch (Exception)
             {
 
-                throw;
+                
+            }
+        }
+
+        //Ito naman para mafill ang firstname and lastname textbox natin gamit ito makukuha ko ang similar rows niya and maipapasok ko siya sa mga textbox as long as similar siya
+        protected void TextBoxId_TextChanged(object sender, EventArgs e)
+        {
+            checkIdInfo();
+            
+        }
+
+        public void checkIdInfo()
+        {
+            try
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                {
+                    sqlCon.Open(); //Buksan ang connection
+
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = sqlCon;
+
+                    cmd.CommandText = "SELECT lastname,firstname FROM tb_borrowers WHERE id=@id";
+
+                    cmd.Parameters.AddWithValue("@id", TextBoxId.Text); //After mag text change kaya make sure na meron talagang ganung data
+
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapt.Fill(ds);
+
+                    //Then yung firstname and lastname textbox natin na ma auto fill sila
+                    TextBoxLastname.Text = ds.Tables[0].Rows[0]["lastname"].ToString(); //lastname natin
+                    TextBoxFirstname.Text = ds.Tables[0].Rows[0]["firstname"].ToString(); //firstname natin
+                }
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('ID Number not found')</script>");
+            }
+        }
+
+        //Ito ay para sa pag insert ng data sa tb_borrowhistory sa ating mahal na database ahahhahahah ahahhaha ahahhaha
+        protected void ButtonRequest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Page.IsValid)
+                {
+                    using (SqlConnection sqlCon = new SqlConnection(connectString))
+                    {
+                        string query = "INSERT INTO tb_borrowhistory (transno,borrowerid,itemborrowed,quantity,date_borrowed,date_return,is_returned) VALUES (@transno,@borrowerid,@itemborrowed,@quantity,@date_borrowed,@date_return,@is_returned)";
+                        sqlCon.Open();
+                        SqlCommand cmd = new SqlCommand(query, sqlCon);
+
+                        string query2= "UPDATE[tb_items] SET [quantity] = [quantity]-@quantity WHERE itemcode=@itemcode";
+                        SqlCommand cmd2 = new SqlCommand(query2, sqlCon);
+
+                        //Kuhanin ang value sa ating mga textbox and dropdownlist using command parameters with add with values
+                        cmd.Parameters.AddWithValue("@transno", TextBoxTransno.Text.Trim());
+                        cmd.Parameters.AddWithValue("@borrowerid", TextBoxId.Text.Trim());
+                        cmd.Parameters.AddWithValue("@itemborrowed", DropDownListRequesteditem.SelectedItem.Text.ToString());
+                        cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(DropDownListQuantity.Text.Trim()));
+                        cmd.Parameters.AddWithValue("@date_borrowed",DateTime.UtcNow);
+                        cmd.Parameters.AddWithValue("@date_return", Convert.ToDateTime(TextBoxReturntime.Text));
+                        cmd.Parameters.AddWithValue("@is_returned", "false");
+
+                        //Ito yung update ng database
+                        cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32(DropDownListQuantity.Text.Trim()));
+                        cmd2.Parameters.AddWithValue("@itemcode",TextBoxItemcode.Text.Trim());
+
+
+                        //Execute
+                        cmd.ExecuteNonQuery();
+                        cmd2.ExecuteNonQuery();
+                        sqlCon.Close();
+
+                        if (IsPostBack)
+                        {
+                            //Clear ko sila lahat
+                            TextBoxTransno.Text = "";
+                            TextBoxId.Text = "";
+                            DropDownListRequesteditem.SelectedIndex = 0;
+                            DropDownListQuantity.Items.Clear(); //Since wala namang value ang requested item dropdown sa zero might as well iclear ko nalang ito kasi malalagyan din naman ito ehh
+                            TextBoxReturntime.Text = "";
+                            TextBoxItemcode.Text = "";
+                            Response.Write("<script>alert('Data Added Successfully')</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Please fill up necessary informations')</script>");
+                        }
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.StackTrace + "')</script>");
             }
         }
     }

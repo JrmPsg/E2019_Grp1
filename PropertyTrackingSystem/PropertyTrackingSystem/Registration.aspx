@@ -35,37 +35,36 @@
 
             <%-- Lastname Label and Textbox --%>
             <asp:Label ID="LabelLastname" runat="server" Text="Lastname*"></asp:Label>
-            <asp:TextBox ID="TextBoxLastname" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxLastname" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="lastnameValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxLastname"></asp:RequiredFieldValidator>
 
             <%-- Type of Client Label and Textbox --%>
             <asp:Label ID="LabelClienttype" runat="server" Text="Type of Client*"></asp:Label>
-            <asp:TextBox ID="TextBoxClienttype" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxClienttype" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="clienttypeValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxClienttype"></asp:RequiredFieldValidator>
 
             <%-- ID Number Label and Textbox --%>
             <asp:Label ID="LabelId" runat="server" Text="ID No*"></asp:Label>
-            <asp:TextBox ID="TextBoxId" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxId" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="idValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxId"></asp:RequiredFieldValidator>
 
             <%-- Firstname Label and Textbox --%>
             <asp:Label ID="LabelFirstname" runat="server" Text="Firstname*"></asp:Label>
-            <asp:TextBox ID="TextBoxFirstname" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxFirstname" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="firstnameValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxFirstname"></asp:RequiredFieldValidator>
 
             <%-- Department Label and Textbox --%>
             <asp:Label ID="LabelDepartment" runat="server" Text="Department*"></asp:Label>
-            <asp:TextBox ID="TextBoxDepartment" runat="server"></asp:TextBox>
-
+            <asp:TextBox ID="TextBoxDepartment" runat="server" autocomplete="off"></asp:TextBox>
 
             <%-- Contact Number Label and Textbox --%>
             <asp:Label ID="LabelContactno" runat="server" Text="Contact Number*"></asp:Label>
-            <asp:TextBox ID="TextBoxContactno" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxContactno" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="contactnoValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxContactno" ValidationExpression="\d{11}"></asp:RequiredFieldValidator>
 
             <%-- Course / Section  Label and Textbox--%>
             <asp:Label ID="LabelCourse" runat="server" Text="Course / Section*"></asp:Label>
-            <asp:TextBox ID="TextBoxCourse" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxCourse" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="courseValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxCourse"></asp:RequiredFieldValidator>
 
             <%-- Gender --%>
@@ -78,13 +77,13 @@
             <asp:RequiredFieldValidator ID="genderValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="DropDownListGender" InitialValue="none"></asp:RequiredFieldValidator>
 
              <%-- Already Registered using hyperlink of asp --%>
-                <asp:HyperLink ID="HyperLink" runat="server" NavigateUrl="~/RequestItem.aspx" Text="Already Registered?"></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink" runat="server" NavigateUrl="~/RequestItem.aspx" Text="Already Registered?"></asp:HyperLink>
 
             <%-- Register Button pag clinick ito magregister ng bagong user sa database--%>
-            <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click" />
+            <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click"/>
 
             <%-- Cancel Button pag clinick ito magclear nalang siguro lahat ng mga text na nasa ating mga textbox and dropdown list ano????? --%>
-            <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" CausesValidation="true" />
+            <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" />
 
         </section>
 

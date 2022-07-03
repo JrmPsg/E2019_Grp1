@@ -242,11 +242,11 @@ header {
     left: 74px;
     top: 90px;
 
-    color:white;
+    color:#FFFFFF;
     padding-left:29px;
     box-sizing:border-box;
-    background: rgba(138, 138, 138, 0.18);
     border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
@@ -314,7 +314,7 @@ header {
     left: 74px;
     top: 194px;
 
-    color:white;
+    color:#FFFFFF;
     padding-left:29px;
     box-sizing:border-box;
     background: rgba(138, 138, 138, 0.18);
@@ -565,5 +565,159 @@ header {
     border-radius: 15px;
     color:white;
 }
+
+/*
+    Validators ko
+*/
+
+/*Request Item Validator*/
+#requesteditemValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 502px;
+    top: 143px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}
+
+/*Lastname Validator*/
+#lastnameValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 97px;
+    top: 143px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+/*Item Code Validator*/
+#itemcodeValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 502px;
+    top: 247px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+/*Quantity Validator*/
+#listquantityValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 854px;
+    top: 248px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+/*ID Validator*/
+#idValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 97px;
+    top: 352px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+/*Firstname Validator*/
+#firstnameValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 97px;
+    top: 247px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}
+/*Return Time Validator*/
+#returntimeValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 500px;
+    top: 354px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}
+/*Trans no Validator*/
+#transnoValidator{
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 821px;
+    top: 354px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+
 
 

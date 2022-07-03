@@ -35,41 +35,49 @@
                 <%-- Requested Item label and drop down list component --%>
                 <asp:Label ID="LabelRequesteditem" runat="server" Text="Requested Item"></asp:Label>
                 <asp:DropDownList ID="DropDownListRequesteditem" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListRequesteditem_SelectedIndexChanged"></asp:DropDownList>
+                <asp:RequiredFieldValidator ID="requesteditemValidator" runat="server" ErrorMessage="Required" ControlToValidate="DropDownListRequesteditem" InitialValue="0"></asp:RequiredFieldValidator>
 
                 <%-- Lastname label and textbox component --%>
                 <asp:Label ID="LabelLastname" runat="server" Text="Lastname"></asp:Label>
-                <asp:TextBox ID="TextBoxLastname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxLastname" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="lastnameValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxLastname"></asp:RequiredFieldValidator>
 
                 <%-- Item code label and textbox component --%>
                 <asp:Label ID="LabelItemcode" runat="server" Text="Item Code"></asp:Label>
-                <asp:TextBox ID="TextBoxItemcode" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxItemcode" runat="server" ReadOnly="true"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="itemcodeValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxItemcode"></asp:RequiredFieldValidator>
 
                 <%-- Quantity label and dropdown component --%>
                 <asp:Label ID="LabelQuantity" runat="server" Text="Quantity*"></asp:Label>
                 <asp:DropDownList ID="DropDownListQuantity" runat="server"></asp:DropDownList>
-                
+                <asp:RequiredFieldValidator ID="listquantityValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="DropDownListQuantity" InitialValue="0"></asp:RequiredFieldValidator>
+
                 <%-- ID number label and textbox component --%>
                 <asp:Label ID="LabelId" runat="server" Text="ID No"></asp:Label>
-                <asp:TextBox ID="TextBoxId" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxId" runat="server" autocomplete="off" AutoPostBack="true" OnTextChanged="TextBoxId_TextChanged"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="idValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxId"></asp:RequiredFieldValidator>
 
                 <%-- Firstname label and textbox component --%>
                 <asp:Label ID="LabelFirstname" runat="server" Text="Firstname"></asp:Label>
-                <asp:TextBox ID="TextBoxFirstname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxFirstname" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="firstnameValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxFirstname"></asp:RequiredFieldValidator>
 
                 <%-- Return Time label and calendar component --%>
                 <asp:Label ID="LabelReturntime" runat="server" Text="Return Time"></asp:Label>
                 <asp:TextBox ID="TextBoxReturntime" runat="server" TextMode ="DateTimeLocal"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="returntimeValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxReturntime"></asp:RequiredFieldValidator>
 
                 <%-- Trans No. label and textbox component --%>
                 <asp:Label ID="LabelTransno" runat="server" Text="Trans No."></asp:Label>
-                <asp:TextBox ID="TextBoxTransno" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxTransno" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="transnoValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxTransno"></asp:RequiredFieldValidator>
 
                 <%-- Not yet Registered using hyperlink of asp --%>
 
                 <asp:HyperLink ID="HyperLink" runat="server" NavigateUrl="~/Registration.aspx" Text="Not Yet Registered?"></asp:HyperLink>
 
                 <%-- Request Button component--%>
-                <asp:Button ID="ButtonRequest" runat="server" Text="Request" />
+                <asp:Button ID="ButtonRequest" runat="server" Text="Request" OnClick="ButtonRequest_Click"/>
 
                 <%-- Cancel Button component --%>
                 <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" />
