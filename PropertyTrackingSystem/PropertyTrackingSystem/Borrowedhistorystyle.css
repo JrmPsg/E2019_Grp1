@@ -180,10 +180,11 @@ header {
     height: 31px;
     left: 891px;
     top: 91px;
-    
+
     color:#FFFFFF;
+    padding-left:20px;
+    box-sizing:border-box;
     background: #3B3B3B;
-    opacity: 0.2;
     border-radius: 20px;
 }
 

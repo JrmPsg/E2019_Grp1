@@ -21,7 +21,7 @@
 
             <%-- Username Label, TextBox, and Validator Component --%>
             <asp:Label ID="LabelUsername" runat="server" Text="Username:"></asp:Label>
-            <asp:TextBox ID="TextBoxUsername" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxUsername" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="usernameValidator" runat="server" ErrorMessage="Required" ControlToValidate="TextBoxUsername"></asp:RequiredFieldValidator>
 
             <%-- Password Label, TextBox, and Validator Component --%>
@@ -33,7 +33,7 @@
             <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click" CausesValidation="false"/>
 
             <%-- Login Button --%>
-            <asp:Button ID="ButtonLogin" runat="server" Text="Login"/>
+            <asp:Button ID="ButtonLogin" runat="server" Text="Login" OnClick="ButtonLogin_Click"/>
         </section>
     </form>
 </body>

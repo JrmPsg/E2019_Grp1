@@ -21,17 +21,17 @@
 
             <%-- Lastname Label, TextBox, Validator component --%>
             <asp:Label ID="LabelLastname" runat="server" Text="Lastname"></asp:Label>
-            <asp:TextBox ID="TextBoxLastname" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxLastname" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="lastnameValidator" runat="server" ErrorMessage="Required" ControlToValidate="TextBoxLastname"></asp:RequiredFieldValidator>
 
             <%-- Firstname Label, TextBox, Validator component --%>
             <asp:Label ID="LabelFirstname" runat="server" Text="Firstname"></asp:Label>
-            <asp:TextBox ID="TextBoxFirstname" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxFirstname" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="firstnameValidator" runat="server" ErrorMessage="Required" ControlToValidate="TextBoxFirstname"></asp:RequiredFieldValidator>
 
             <%-- Username Label, TextBox, Validator component --%>
             <asp:Label ID="LabelUsername" runat="server" Text="Username"></asp:Label>
-            <asp:TextBox ID="TextBoxUsername" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxUsername" runat="server" autocomplete="off"></asp:TextBox>
             <asp:RequiredFieldValidator ID="usernameValidator" runat="server" ErrorMessage="Required" ControlToValidate="TextBoxUsername"></asp:RequiredFieldValidator>
 
             <%-- Password Label, TextBox, Validator component --%>
@@ -46,7 +46,7 @@
             <asp:CompareValidator ID="comparepasswordValidator" runat="server" ErrorMessage="Password does not match" ControlToCompare="TextBoxPassword" ControlToValidate="TextBoxConfirmPassword"></asp:CompareValidator>
 
             <%-- Sign up or Register Button component --%>
-            <asp:Button ID="ButtonRegister" runat="server" Text="Register" />
+            <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click"/>
 
             <%-- Already Have an Account Hyperlink component --%>
             <asp:HyperLink ID="HyperLink" runat="server" NavigateUrl="~/Login.aspx" Text="Already Have an Account?"></asp:HyperLink>

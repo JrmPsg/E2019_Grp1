@@ -27,31 +27,36 @@ namespace PropertyTrackingSystem
         //Para dun sa dashboard button
         protected void ButtonDashboard_Click(object sender, EventArgs e)
         {
-            ButtonDashboard.PostBackUrl = "Dashboard.aspx";
+            //ButtonDashboard.PostBackUrl = "Dashboard.aspx";
+            Response.Redirect("Dashboard.aspx");
         }
 
         //Para dun sa request item button
         protected void ButtonRequestitem_Click(object sender, EventArgs e)
         {
-            ButtonRequestitem.PostBackUrl = "RequestItem.aspx";
+            //ButtonRequestitem.PostBackUrl = "RequestItem.aspx";
+            Response.Redirect("RequestItem.aspx");
         }
 
         //Para dun sa items / tools button
         protected void ButtonItemstools_Click(object sender, EventArgs e)
         {
-            ButtonItemstools.PostBackUrl = "Itemstools.aspx";
+            //ButtonItemstools.PostBackUrl = "Itemstools.aspx";
+            Response.Redirect("Itemstools.aspx");
         }
 
         //Para dun sa borrowed history button
         protected void ButtonBorrowedhistory_Click(object sender, EventArgs e)
         {
-            ButtonBorrowedhistory.PostBackUrl = "Borrowedhistory.aspx";
+            //ButtonBorrowedhistory.PostBackUrl = "Borrowedhistory.aspx";
+            Response.Redirect("Borrowedhistory.aspx");
         }
 
         //Para dun sa reports button
         protected void ButtonReports_Click(object sender, EventArgs e)
         {
-            ButtonReports.PostBackUrl = "Report.aspx";
+            //ButtonReports.PostBackUrl = "Report.aspx";
+            Response.Redirect("Report.aspx");
         }
 
         //First is to bind the data from the database to the gridview
@@ -97,6 +102,7 @@ namespace PropertyTrackingSystem
             gridData();
         }
 
+        //Dito ay returning ng books kapag ang ating dropdownlist ay naka true then mag add ang item inventory ayun langs kasi ito ay history therefore wala akong babaguhin dito
         protected void GridViewBorrowHistory_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             try
@@ -110,14 +116,30 @@ namespace PropertyTrackingSystem
                     sqlCmd.Parameters.AddWithValue("@transno",(GridViewBorrowHistory.DataKeys[e.RowIndex].Value.ToString()));
                     sqlCmd.Parameters.AddWithValue("@is_returned",(GridViewBorrowHistory.Rows[e.RowIndex].FindControl("DropDownReturn") as DropDownList).Text.Trim());
 
-
                     sqlCmd.ExecuteNonQuery();
                     GridViewBorrowHistory.EditIndex = -1; //Para bumalik agad siya after mag edit ng row index
                     gridData();
-                    
+
+                    //Since pahirapan makuha yung value sa dropdown kukuhanin ko siya via label after natin mag execute ng first query
+                    //Bale ang logic ko dito is after ng first query mag uupdate ang data and ang edit index ay babalik sa dati since done na ang udpate
+                    //Therefore, makukuha ko ang value via the label component na nasa item template which is yung pinapakita ng gridview sa mga users
+                    //If returned is true then update natin ang table ng items then iadd natin ang quantity na yun then ayun nareturn na siya no need for if else or else dito
+                    //Whahahahahhahaa OMG nagawa ko ito ng logic ko langs ahahahhaahahhah
+                    if ((GridViewBorrowHistory.Rows[e.RowIndex].FindControl("lblreturn") as Label).Text.Trim().Equals("true"))
+                    {
+                        string query2 = "UPDATE[tb_items] SET [quantity] = [quantity]+@quantity WHERE itemname=@itemname";
+                        SqlCommand cmd2 = new SqlCommand(query2, sqlCon);
+
+                        cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32(e.NewValues["quantity"]));
+                        cmd2.Parameters.AddWithValue("@itemname",e.NewValues["itemborrowed"]);
+
+                        cmd2.ExecuteNonQuery();
+                        
+                    }
+
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                
             }
@@ -142,10 +164,26 @@ namespace PropertyTrackingSystem
                    
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                
 
+            }
+        }
+
+        protected void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectString))
+            {
+                string query = "SELECT transno,borrowerid,itemborrowed,quantity,date_borrowed,date_return,is_returned FROM tb_borrowhistory WHERE transno LIKE '%" + TextBoxSearch.Text + "%'";
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, sqlCon);
+                DataSet ds = new DataSet();
+                sqlDa.Fill(ds);
+
+                GridViewBorrowHistory.DataSource = ds;
+                GridViewBorrowHistory.DataBind();
+                sqlCon.Close();
             }
         }
     }

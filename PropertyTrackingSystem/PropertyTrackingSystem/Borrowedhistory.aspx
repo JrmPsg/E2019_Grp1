@@ -11,11 +11,11 @@
     <form id="form1" runat="server">
     <%-- Ito naman yung sa navigation sa left side gagamit ako ng unordered list ng html --%>
         <asp:Panel ID="navigation" runat="server">
-            <asp:Button ID="ButtonDashboard" runat="server" Text="Dashboard" BorderStyle="None" CssClass="menubutton" OnClick="ButtonDashboard_Click" />
-            <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" />
-            <asp:Button ID="ButtonItemstools" runat="server" Text="Items / Tools" BorderStyle="None" CssClass="menubutton" OnClick="ButtonItemstools_Click" />
-            <asp:Button ID="ButtonBorrowedhistory" runat="server" Text="Borrowed History" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowedhistory_Click" />
-            <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" />
+            <asp:Button ID="ButtonDashboard" runat="server" Text="Dashboard" BorderStyle="None" CssClass="menubutton" OnClick="ButtonDashboard_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonItemstools" runat="server" Text="Items / Tools" BorderStyle="None" CssClass="menubutton" OnClick="ButtonItemstools_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonBorrowedhistory" runat="server" Text="Borrowed History" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowedhistory_Click" CausesValidation="false" />
+            <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" CausesValidation="false"/>
 
         </asp:Panel>
         <%-- Ito yung sa header na nasa taas --%>
@@ -28,7 +28,7 @@
 
         <%-- Search Transaction No Label and Textbox--%>
         <asp:Label ID="LabelSearch" runat="server" Text="Search Trans No"></asp:Label>
-        <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxSearch" runat="server" OnTextChanged="TextBoxSearch_TextChanged" AutoPostBack="True" autocomplete="off"></asp:TextBox>
 
         <%-- Next is yung gridview na nasa loob ng div container kasi di ko magitna ang gridview pag walang div container --%>
 
@@ -49,26 +49,32 @@
                 <Columns>
                 <%-- Transaction Number boundfield--%>
                     <asp:BoundField DataField="transno" HeaderText="Transaction No"/>
+                    
 
                 <%-- Borrower ID boundfield--%>
                     <asp:BoundField DataField="borrowerid" HeaderText="Borrower ID"/>
+                   
 
                 <%-- Item Borrowed boundfield--%>
                     <asp:BoundField DataField="itemborrowed" HeaderText="Item Borrowed"/>
+                   
 
                 <%-- Quantity boundfield --%>
-                    <asp:BoundField DataField="quantity" HeaderText="Quantity"/>
+                    <asp:BoundField DataField="quantity" HeaderText="Quantity" />
+                   
 
                 <%-- Date Borrowed boundfield--%>
                     <asp:BoundField DataField="date_borrowed" HeaderText="Date Borrowed"/>
+                  
 
                 <%-- Date Return boundfield--%>
                     <asp:BoundField DataField="date_return" HeaderText="Expected Return"/>
+                   
 
                 <%-- Returned? dropdown item template field--%>
                     <asp:TemplateField HeaderText="Returned">
                         <ItemTemplate>
-                            <asp:Label runat="server" Text='<%#Eval("is_returned") %>'></asp:Label>
+                            <asp:Label ID="lblreturn" runat="server" Text='<%#Eval("is_returned") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownReturn" runat="server">
