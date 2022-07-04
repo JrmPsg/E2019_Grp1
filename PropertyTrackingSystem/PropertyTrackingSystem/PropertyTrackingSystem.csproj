@@ -108,9 +108,9 @@
     <Content Include="Loginstyle.css" />
     <Content Include="Registration.aspx" />
     <Content Include="Registrationstyle.css" />
-    <Content Include="Reportstyle.css" />
+    <Content Include="Borrowerstyle.css" />
     <Content Include="Borrowedhistorystyle.css" />
-    <Content Include="Report.aspx" />
+    <Content Include="Borrower.aspx" />
     <Content Include="requestitemstyle.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -168,12 +168,12 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Borrower.aspx.cs">
+      <DependentUpon>Borrower.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Borrower.aspx.designer.cs">
+      <DependentUpon>Borrower.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequestItem.aspx.cs">
       <DependentUpon>RequestItem.aspx</DependentUpon>

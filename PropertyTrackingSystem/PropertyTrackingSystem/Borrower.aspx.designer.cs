@@ -67,13 +67,13 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.Button ButtonBorrowedhistory;
         
         /// <summary>
-        /// ButtonReports control.
+        /// ButtonBorrowers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonReports;
+        protected global::System.Web.UI.WebControls.Button ButtonBorrowers;
         
         /// <summary>
         /// LabelTitle control.
@@ -83,5 +83,50 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTitle;
+        
+        /// <summary>
+        /// ButtonLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLogout;
+        
+        /// <summary>
+        /// LabelBorrowerinfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelBorrowerinfo;
+        
+        /// <summary>
+        /// LabelSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSearch;
+        
+        /// <summary>
+        /// TextBoxSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
+        
+        /// <summary>
+        /// GridViewBorrowers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewBorrowers;
     }
 }

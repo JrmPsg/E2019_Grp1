@@ -15,13 +15,14 @@
             <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" CausesValidation="false"/>
             <asp:Button ID="ButtonItemstools" runat="server" Text="Items / Tools" BorderStyle="None" CssClass="menubutton" OnClick="ButtonItemstools_Click" CausesValidation="false" />
             <asp:Button ID="ButtonBorrowedhistory" runat="server" Text="Borrowed History" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowedhistory_Click" CausesValidation="false"/>
-            <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonBorrowers" runat="server" Text="Borrowers" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowers_Click" CausesValidation="false"/>
 
         </asp:Panel>
 
         <%-- Ito yung sa header na nasa taas --%>
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
+            <asp:Button ID="ButtonLogout" runat="server" Text="Logout" OnClick="ButtonLogout_Click" CausesValidation="false"/>
         </header>
 
         <%-- Yung ating Registration form label --%>
@@ -59,8 +60,8 @@
 
             <%-- Contact Number Label and Textbox --%>
             <asp:Label ID="LabelContactno" runat="server" Text="Contact Number*"></asp:Label>
-            <asp:TextBox ID="TextBoxContactno" runat="server" autocomplete="off"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="contactnoValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxContactno" ValidationExpression="\d{11}"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="TextBoxContactno" runat="server" autocomplete="off" TextMode="Phone"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="regexValidator" runat="server" ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxContactno" ValidationExpression="[0-9]{11}"></asp:RegularExpressionValidator>
 
             <%-- Course / Section  Label and Textbox--%>
             <asp:Label ID="LabelCourse" runat="server" Text="Course / Section*"></asp:Label>
@@ -83,7 +84,7 @@
             <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click"/>
 
             <%-- Cancel Button pag clinick ito magclear nalang siguro lahat ng mga text na nasa ating mga textbox and dropdown list ano????? --%>
-            <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" />
+            <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" CausesValidation="false" OnClick="ButtonCancel_Click" />
 
         </section>
 

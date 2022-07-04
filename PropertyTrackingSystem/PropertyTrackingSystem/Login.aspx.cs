@@ -13,7 +13,7 @@ namespace PropertyTrackingSystem
 {
     public partial class Login : System.Web.UI.Page
     {
-        string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
+        //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -32,7 +32,8 @@ namespace PropertyTrackingSystem
             {
                 if (Page.IsValid)
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(connectString))
+                    string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                    using (SqlConnection sqlCon = new SqlConnection(conn))
                     {
                         string query = "SELECT * FROM tb_admin WHERE username=@username AND [password]=HASHBYTES('MD5',@password)";
                         sqlCon.Open();
@@ -47,8 +48,7 @@ namespace PropertyTrackingSystem
 
                         if (IsPostBack && sdr.HasRows)
                         {
-                            //Clear ko sila lahat
-                            Response.Write("<script>alert('Data Added Successfully')</script>");
+                            Session["Username"] = "Welcome " + TextBoxUsername.Text.Trim();
                             Response.Redirect("Dashboard.aspx");
                         }
                         else

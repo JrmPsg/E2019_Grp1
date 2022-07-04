@@ -15,12 +15,19 @@ namespace PropertyTrackingSystem
     public partial class Itemstoolsmain : System.Web.UI.Page
     {
 
-        string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
+        //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                gridData();
+                if (Session["Username"] != null)
+                {
+                    gridData(); 
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
             }
             
         }
@@ -53,17 +60,18 @@ namespace PropertyTrackingSystem
         }
 
         //Para dun sa reports button
-        protected void ButtonReports_Click(object sender, EventArgs e)
+        protected void ButtonBorrowers_Click(object sender, EventArgs e)
         {
             //ButtonReports.PostBackUrl = "Report.aspx";
-            Response.Redirect("Report.aspx");
+            Response.Redirect("Borrower.aspx");
         }
 
         //Automatic magfill ang ating gridview
         public void gridData()
         {
+            string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             DataTable dtbl = new DataTable();
-            using (SqlConnection sqlCon = new SqlConnection(connectString))
+            using (SqlConnection sqlCon = new SqlConnection(conn))
             {
                 sqlCon.Open();
 
@@ -97,7 +105,8 @@ namespace PropertyTrackingSystem
             {
                 if (e.CommandName.Equals("Addnew"))
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(connectString))
+                    string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                    using (SqlConnection sqlCon = new SqlConnection(conn))
                     {
                         sqlCon.Open();
                         string query = "INSERT INTO tb_items (itemcode,itemname,quantity,department) VALUES(@itemcode,@itemname,@quantity,@department)";
@@ -108,18 +117,25 @@ namespace PropertyTrackingSystem
                         sqlCmd.Parameters.AddWithValue("@quantity", (GridViewTables.FooterRow.FindControl("txtQuantityFooter") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@department", (GridViewTables.FooterRow.FindControl("txtDepartmentFooter") as TextBox).Text.Trim());
 
-                        sqlCmd.ExecuteNonQuery();
-                        gridData();
-
-                        LabelSuccess.Text = "New Record Inserted!";
-                        LabelError.Text = "";
+                        if (
+                            (GridViewTables.FooterRow.FindControl("txtitemCodeFooter") as TextBox).Text.Trim().Equals("") || 
+                            (GridViewTables.FooterRow.FindControl("txtItemNameFooter") as TextBox).Text.Trim().Equals("") || 
+                            (GridViewTables.FooterRow.FindControl("txtQuantityFooter") as TextBox).Text.Trim().Equals(""))
+                        {
+                            Response.Write("<script>alert('Please enter necessary informations')</script>");
+                            gridData();
+                        }
+                        else
+                        {
+                            sqlCmd.ExecuteNonQuery();
+                            gridData();
+                        }
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                LabelSuccess.Text = "";
-                LabelError.Text = ex.ToString();
+                
 
             }
         }
@@ -142,7 +158,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open();
                     string query = "UPDATE [tb_items] SET itemcode=@itemcode,itemname=@itemname,quantity=@quantity,department=@department WHERE No=@No";
@@ -158,14 +175,12 @@ namespace PropertyTrackingSystem
                     GridViewTables.EditIndex = -1; //Para bumalik agad siya after mag edit ng row index
                     gridData();
 
-                    LabelSuccess.Text = "Row Updated Successfully";
-                    LabelError.Text = "";
+                    
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                LabelSuccess.Text = "";
-                LabelError.Text = ex.StackTrace;
+               
 
             }
         }
@@ -174,7 +189,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open();
                     string query = "DELETE FROM tb_items WHERE No=@No";
@@ -186,33 +202,44 @@ namespace PropertyTrackingSystem
                
                     gridData();
 
-                    LabelSuccess.Text = "Row Deleted Successfully";
-                    LabelError.Text = "";
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                LabelSuccess.Text = "";
-                LabelError.Text = ex.StackTrace;
+                
 
             }
         }
-
+        
         //Automatic filtering ng gridview gamit ang search na ito
         protected void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            using(SqlConnection sqlCon = new SqlConnection(connectString))
+            try
             {
-                string query = "SELECT No,itemcode,itemname,quantity,department FROM tb_items WHERE itemname LIKE '%"+ TextBoxSearch.Text+ "%'";
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter(query, sqlCon);
-                DataSet ds = new DataSet();
-                sqlDa.Fill(ds);
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
+                {
+                    string query = "SELECT No,itemcode,itemname,quantity,department FROM tb_items WHERE itemname LIKE '%" + TextBoxSearch.Text + "%'";
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter(query, sqlCon);
+                    DataSet ds = new DataSet();
+                    sqlDa.Fill(ds);
 
-                GridViewTables.DataSource = ds;
-                GridViewTables.DataBind();
-                sqlCon.Close();
+                    GridViewTables.DataSource = ds;
+                    GridViewTables.DataBind();
+                    sqlCon.Close();
+                }
             }
+            catch (Exception)
+            {
+                
+            }
+        }
+        //Logout Button
+        protected void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("Login.aspx");
         }
     }
 }

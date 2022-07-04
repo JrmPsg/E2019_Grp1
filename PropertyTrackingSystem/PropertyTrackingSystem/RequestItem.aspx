@@ -15,13 +15,14 @@
             <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" CausesValidation="false"/>
             <asp:Button ID="ButtonItemstools" runat="server" Text="Items / Tools" BorderStyle="None" CssClass="menubutton" OnClick="ButtonItemstools_Click" CausesValidation="false"/>
             <asp:Button ID="ButtonBorrowedhistory" runat="server" Text="Borrowed History" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowedhistory_Click" CausesValidation="false"/>
-            <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonBorrowers" runat="server" Text="Borrowers" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowers_Click" CausesValidation="false"/>
 
         </asp:Panel>
 
         <%-- Ito yung sa header na nasa taas --%>
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
+            <asp:Button ID="ButtonLogout" runat="server" Text="Logout" OnClick="ButtonLogout_Click" CausesValidation="false"/>
         </header>
         
             <asp:Label ID="LabelRequestform" runat="server" Text="Request Form"></asp:Label>
@@ -69,7 +70,7 @@
 
                 <%-- Trans No. label and textbox component --%>
                 <asp:Label ID="LabelTransno" runat="server" Text="Trans No."></asp:Label>
-                <asp:TextBox ID="TextBoxTransno" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:TextBox ID="TextBoxTransno" runat="server" autocomplete="off" AutoPostBack="true"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="transnoValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxTransno"></asp:RequiredFieldValidator>
 
                 <%-- Not yet Registered using hyperlink of asp --%>

@@ -67,13 +67,13 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.Button ButtonBorrowedhistory;
         
         /// <summary>
-        /// ButtonReports control.
+        /// ButtonBorrowers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonReports;
+        protected global::System.Web.UI.WebControls.Button ButtonBorrowers;
         
         /// <summary>
         /// LabelTitle control.
@@ -83,6 +83,15 @@ namespace PropertyTrackingSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTitle;
+        
+        /// <summary>
+        /// ButtonLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLogout;
         
         /// <summary>
         /// LabelRegistrationform control.
@@ -247,13 +256,13 @@ namespace PropertyTrackingSystem {
         protected global::System.Web.UI.WebControls.TextBox TextBoxContactno;
         
         /// <summary>
-        /// contactnoValidator control.
+        /// regexValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator contactnoValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexValidator;
         
         /// <summary>
         /// LabelCourse control.

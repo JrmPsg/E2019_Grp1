@@ -15,12 +15,19 @@ namespace PropertyTrackingSystem
     public partial class Borrowedhistory : System.Web.UI.Page
     {
         //Ang ating connection string
-        string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
+        //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                gridData();
+                if (Session["Username"] != null)
+                {
+                    gridData(); 
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
             }
         }
 
@@ -53,17 +60,18 @@ namespace PropertyTrackingSystem
         }
 
         //Para dun sa reports button
-        protected void ButtonReports_Click(object sender, EventArgs e)
+        protected void ButtonBorrowers_Click(object sender, EventArgs e)
         {
             //ButtonReports.PostBackUrl = "Report.aspx";
-            Response.Redirect("Report.aspx");
+            Response.Redirect("Borrower.aspx");
         }
 
         //First is to bind the data from the database to the gridview
         public void gridData()
         {
+            string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             DataTable dtbl = new DataTable();
-            using (SqlConnection sqlCon = new SqlConnection(connectString))
+            using (SqlConnection sqlCon = new SqlConnection(conn))
             {
                 sqlCon.Open();
 
@@ -107,7 +115,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open();
                     string query = "UPDATE [tb_borrowhistory] SET is_returned=@is_returned WHERE transno=@transno";
@@ -149,7 +158,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open();
                     string query = "DELETE FROM tb_borrowhistory WHERE transno=@transno";
@@ -173,7 +183,8 @@ namespace PropertyTrackingSystem
 
         protected void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectString))
+            string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection sqlCon = new SqlConnection(conn))
             {
                 string query = "SELECT transno,borrowerid,itemborrowed,quantity,date_borrowed,date_return,is_returned FROM tb_borrowhistory WHERE transno LIKE '%" + TextBoxSearch.Text + "%'";
                 sqlCon.Open();
@@ -185,6 +196,13 @@ namespace PropertyTrackingSystem
                 GridViewBorrowHistory.DataBind();
                 sqlCon.Close();
             }
+        }
+
+        //Logout Button
+        protected void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("Login.aspx");
         }
     }
 }

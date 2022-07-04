@@ -40,6 +40,20 @@ header {
     color: #FFFFFF;
 }
 
+/*Logout Button natin*/
+#ButtonLogout {
+    position:absolute;
+    width:91px;
+    height:26.63px;
+    left:86.39%;
+    right:7.29%;
+    top:27.87%;
+    bottom:28.47%;
+
+    background:#D9D9D9;
+    border-radius:14.8px;
+}
+
 /*Ito yung para sa Navigation Menu na nasa gilid*/
 #navigation {
     position: absolute;
@@ -118,7 +132,7 @@ header {
     border-radius: 0px 20px 20px 0px;
     color: #000000;
 }
-#ButtonReports{
+#ButtonBorrowers{
     position: absolute;
     width: 245px;
     height: 37px;
@@ -194,8 +208,8 @@ header {
 
 #tablecontainer{
     position:absolute;
-    width: 1000px;
-    height: 500px;
+    /*width: 1000px;
+    height: 500px;*/
     left: 285px;
     top: 175px;
 }

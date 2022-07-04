@@ -49,7 +49,19 @@ header {
 
     color: #FFFFFF;
 }
+/*Logout Button natin*/
+#ButtonLogout {
+    position:absolute;
+    width:91px;
+    height:26.63px;
+    left:86.39%;
+    right:7.29%;
+    top:27.87%;
+    bottom:28.47%;
 
+    background:#D9D9D9;
+    border-radius:14.8px;
+}
 /*Ito yung para sa Navigation Menu na nasa gilid*/
 #navigation {
     position: absolute;
@@ -128,7 +140,7 @@ header {
     border-radius: 0px 20px 20px 0px;
     color: #000000;
 }
-#ButtonReports{
+#ButtonBorrowers{
     position: absolute;
     width: 245px;
     height: 37px;
@@ -547,6 +559,7 @@ header {
     top: 392px;
 
     background: rgba(255, 255, 255, 0.84);
+    border-color:transparent;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
@@ -563,6 +576,8 @@ header {
     top: 392px;
 
     background: rgba(0, 0, 0, 0.42);
+    border-color:transparent;
+    color:#FFFFFF;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
@@ -664,7 +679,7 @@ header {
     Contact Number Validator
 */
 
-#contactnoValidator {
+#regexValidator {
     position: absolute;
     width: 57px;
     height: 15px;

@@ -15,12 +15,20 @@ namespace PropertyTrackingSystem
     public partial class RequestItem : System.Web.UI.Page
     {
         //Yung ating connection string honestly siguro dapat sa web config ko nalang ito nilagay anoooo??? Para di hassle na ganito kuhanin ko nalang yung name ng inadd ko dun sa config
-        string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
+        //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                dropdownData();
+                if (Session["Username"] != null)
+                {
+                    dropdownData();
+                    autoGenerateNumber(); 
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
             }
         }
 
@@ -53,10 +61,10 @@ namespace PropertyTrackingSystem
         }
 
         //Para dun sa reports button
-        protected void ButtonReports_Click(object sender, EventArgs e)
+        protected void ButtonBorrowers_Click(object sender, EventArgs e)
         {
             //ButtonReports.PostBackUrl = "Report.aspx";
-            Response.Redirect("Report.aspx");
+            Response.Redirect("Borrower.aspx");
         }
        
         //Ifill or populate muna natin yung dropdownlist na yun hahhahahha hayyyyyyyy buhayyyyyyyy whoooooo need ko magmeryendaaa gusto ko meryendaaaaaa
@@ -64,7 +72,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using(SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     using (SqlCommand cmd = new SqlCommand("SELECT No, itemname FROM tb_items")) //Dalawang toh need ko yung No magiging parang ahh int value then ang name ay text
                     {
@@ -98,7 +107,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open(); //Buksan ang connection
 
@@ -158,7 +168,8 @@ namespace PropertyTrackingSystem
         {
             try
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectString))
+                string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                using (SqlConnection sqlCon = new SqlConnection(conn))
                 {
                     sqlCon.Open(); //Buksan ang connection
 
@@ -191,7 +202,8 @@ namespace PropertyTrackingSystem
             {
                 if (Page.IsValid)
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(connectString))
+                    string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                    using (SqlConnection sqlCon = new SqlConnection(conn))
                     {
                         string query = "INSERT INTO tb_borrowhistory (transno,borrowerid,itemborrowed,quantity,date_borrowed,date_return,is_returned) VALUES (@transno,@borrowerid,@itemborrowed,@quantity,@date_borrowed,@date_return,@is_returned)";
                         sqlCon.Open();
@@ -264,6 +276,28 @@ namespace PropertyTrackingSystem
             DropDownListRequesteditem.SelectedIndex = 0;
             DropDownListQuantity.Items.Clear(); //Since wala namang value ang requested item dropdown sa zero might as well iclear ko nalang ito kasi malalagyan din naman ito ehh
             TextBoxReturntime.Text = "";
+        }
+        //Logout Button
+        protected void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("Login.aspx");
+        }
+
+        //Para auto generated sana yung ating transaction numberrrr hayyyyyyyy gusto ko pizzzaaaa with siomaiiiii anddddd anddddd steakkkkkkk
+       public void autoGenerateNumber()
+        {
+            var nums = "0123456789"; //Mga numbers natin
+            var chars = new char[8];
+            var random = new Random();
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                chars[i] = nums[random.Next(nums.Length)];
+            }
+
+            string finalstring = new string(chars);
+            TextBoxTransno.Text = finalstring;
         }
     }
 }

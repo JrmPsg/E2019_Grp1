@@ -15,12 +15,13 @@
             <asp:Button ID="ButtonRequestitem" runat="server" Text="Request Item" BorderStyle="None" CssClass="menubutton" OnClick="ButtonRequestitem_Click" CausesValidation="false"/>
             <asp:Button ID="ButtonItemstools" runat="server" Text="Items / Tools" BorderStyle="None" CssClass="menubutton" OnClick="ButtonItemstools_Click" CausesValidation="false"/>
             <asp:Button ID="ButtonBorrowedhistory" runat="server" Text="Borrowed History" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowedhistory_Click" CausesValidation="false"/>
-            <asp:Button ID="ButtonReports" runat="server" Text="Reports" BorderStyle="None" CssClass="menubutton" OnClick="ButtonReports_Click" CausesValidation="false"/>
+            <asp:Button ID="ButtonBorrowers" runat="server" Text="Borrowers" BorderStyle="None" CssClass="menubutton" OnClick="ButtonBorrowers_Click" CausesValidation ="false"/>
 
         </asp:Panel>
         <%-- Ito yung sa header na nasa taas --%>
         <header>
             <asp:Label ID="LabelTitle" runat="server" Text="Property Tracking System"></asp:Label>
+            <asp:Button ID="ButtonLogout" runat="server" Text="Logout" OnClick="ButtonLogout_Click" CausesValidation="false"/>
         </header>
         <%-- Yung Items info na label sa taas --%>
         <asp:Label ID="LabelItemsinfo" runat="server" Text="Items Info"></asp:Label>
@@ -119,9 +120,6 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <%-- Error or success messages dito ko nalang lagay para di hassle hayyy --%>
-            <asp:Label ID="LabelError" runat="server" ForeColor="#ff0000"></asp:Label>
-            <asp:Label ID="LabelSuccess" runat="server" ForeColor="#009900"></asp:Label>
         </div>
     </form>
 </body>

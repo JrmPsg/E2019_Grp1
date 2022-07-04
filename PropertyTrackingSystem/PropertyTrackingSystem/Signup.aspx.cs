@@ -13,7 +13,7 @@ namespace PropertyTrackingSystem
 {
     public partial class Signup : System.Web.UI.Page
     {
-        string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
+        //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,7 +26,8 @@ namespace PropertyTrackingSystem
             {
                 if (Page.IsValid)
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(connectString))
+                    string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+                    using (SqlConnection sqlCon = new SqlConnection(conn))
                     {
                         string query = "INSERT INTO tb_admin (username,password,lastname,firstname) VALUES (@username,HASHBYTES('MD5',@password),@lastname,@firstname)";
                         sqlCon.Open();
