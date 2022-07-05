@@ -6,6 +6,13 @@
 <head runat="server">
     <title>Property Tracking System</title>
     <link rel = "stylesheet" type = "text/css" href = "Borrowedhistorystyle.css">
+    <script type="text/javascript" >
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -49,11 +56,11 @@
                 >
                 <Columns>
                 <%-- Transaction Number boundfield--%>
-                    <asp:BoundField DataField="transno" HeaderText="Transaction No"/>
+                    <asp:BoundField DataField="transno" HeaderText="Transaction No" ReadOnly="true"/>
                     
 
                 <%-- Borrower ID boundfield--%>
-                    <asp:BoundField DataField="borrowerid" HeaderText="Borrower ID"/>
+                    <asp:BoundField DataField="borrowerid" HeaderText="Borrower ID" ReadOnly="true"/>
                    
 
                 <%-- Item Borrowed boundfield--%>
@@ -88,7 +95,7 @@
                 <%-- Template field para sa ating mga image button for edit item template --%>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:ImageButton ImageUrl="~/Image/update.png" CommandName="Edit" ToolTip="Edit" runat="server"/>
+                            <asp:ImageButton ImageUrl="~/Image/update.png" CommandName="Edit" ToolTip="Edit" runat="server" ID="editbt" Enabled='<%# (Eval("is_returned").Equals("true")? false:true) %>'/>
                             <asp:ImageButton ImageUrl="~/Image/delete.png" CommandName="Delete" ToolTip="Delete" runat="server"/>
                         </ItemTemplate>
                         <EditItemTemplate>

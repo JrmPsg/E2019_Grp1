@@ -142,6 +142,7 @@ namespace PropertyTrackingSystem
         protected void ButtonLogout_Click(object sender, EventArgs e)
         {
             Session.RemoveAll();
+            Session["Username"] = null;
             Response.Redirect("Login.aspx");
         }
     }

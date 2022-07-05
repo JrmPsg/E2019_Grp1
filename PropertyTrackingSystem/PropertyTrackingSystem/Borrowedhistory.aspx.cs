@@ -83,6 +83,7 @@ namespace PropertyTrackingSystem
             {
                 GridViewBorrowHistory.DataSource = dtbl;
                 GridViewBorrowHistory.DataBind();
+               
             }
             else
             {
@@ -143,9 +144,11 @@ namespace PropertyTrackingSystem
                         cmd2.Parameters.AddWithValue("@itemname",e.NewValues["itemborrowed"]);
 
                         cmd2.ExecuteNonQuery();
-                        
-                    }
 
+                        ImageButton btn = GridViewBorrowHistory.Rows[e.RowIndex].FindControl("editbt") as ImageButton;
+                        
+                        btn.Enabled = false;
+                    }
                 }
             }
             catch (Exception)
@@ -198,10 +201,13 @@ namespace PropertyTrackingSystem
             }
         }
 
+        
+
         //Logout Button
         protected void ButtonLogout_Click(object sender, EventArgs e)
         {
             Session.RemoveAll();
+            Session["Username"] = null;
             Response.Redirect("Login.aspx");
         }
     }

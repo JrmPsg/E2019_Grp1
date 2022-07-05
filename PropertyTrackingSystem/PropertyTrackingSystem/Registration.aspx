@@ -6,6 +6,13 @@
 <head runat="server">
     <title>Property Tracking System</title>
     <link rel = "stylesheet" type = "text/css" href = "Registrationstyle.css"/>
+    <script type="text/javascript" >
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">

@@ -16,7 +16,10 @@ namespace PropertyTrackingSystem
         //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                oneAdmin();
+            }
         }
 
         //Papuntang Signup kung sakali
@@ -61,6 +64,31 @@ namespace PropertyTrackingSystem
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.StackTrace + "')</script>");
+            }
+        }
+
+        public void oneAdmin()
+        {
+            string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection sqlCon = new SqlConnection(conn))
+            {
+                string query = "SELECT count(*) FROM tb_admin";
+
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(query, sqlCon);
+                cmd.Connection = sqlCon;
+                object totalitems = cmd.ExecuteScalar();
+
+                //LabelNumBorrower.Text = totalitems.ToString();
+
+                if(totalitems.ToString().Equals("1"))
+                {
+                    ButtonRegister.Enabled = false;
+                }
+                else
+                {
+                    ButtonRegister.Enabled = true;
+                }
             }
         }
     }

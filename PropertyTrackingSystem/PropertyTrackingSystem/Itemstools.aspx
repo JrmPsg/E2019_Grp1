@@ -6,6 +6,13 @@
 <head runat="server">
      <title>Property Tracking System</title>
      <link rel = "stylesheet" type = "text/css" href = "Itemstoolstyle.css"/>
+    <script type="text/javascript" >
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -57,10 +64,10 @@
                             <asp:Label runat="server" Text='<%#Eval("itemcode") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtItemCode" runat="server" Text='<%#Eval("itemcode") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtItemCode" runat="server" Text='<%#Eval("itemcode") %>' Enabled="false"></asp:TextBox>
                         </EditItemTemplate>
                         <FooterTemplate>
-                             <asp:TextBox ID="txtItemCodeFooter" runat="server"></asp:TextBox>
+                             <asp:TextBox ID="txtItemCodeFooter" runat="server" Enabled="false"></asp:TextBox>
                         </FooterTemplate>
                     </asp:TemplateField>
 

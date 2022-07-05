@@ -1,0 +1,390 @@
+﻿body {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
+#form1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
+/*
+    Header and title sa taas ng ating web app
+*/
+header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 95%;
+    width: 100%;
+    height: 61px;
+    background: #3B3B3B;
+}
+#LabelTitle {
+    position: absolute;
+    left: 3.82%;
+    top: 34.43%;
+    bottom: 36.07%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+    
+}
+
+/*
+    Mga contents ng sign up form
+*/
+#SectionSignup {
+    position: absolute;
+    width: 579px;
+    height: 853px;
+    left: 431px;
+    top: 96px;
+
+    background: #585858;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/*Sign up Label*/
+#LabelSignup {
+    position: absolute;
+    width: 114px;
+    height: 39px;
+    left: 233px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+/*Lastname Components*/
+#LabelLastname {
+    position: absolute;
+    width: 98px;
+    height: 22px;
+    left: 75px;
+    top: 107px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxLastname {
+    position: absolute;
+    width: 447px;
+    height: 48px;
+    left: 66px;
+    top: 137px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+#lastnameValidator {
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 85px;
+    top: 193px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+
+}
+
+/*Fistname Components*/
+#LabelFirstname {
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    left: 75px;
+    top: 224px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxFirstname {
+    position: absolute;
+    width: 447px;
+    height: 48px;
+    left: 60px;
+    top: 251px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#firstnameValidator {
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 85px;
+    top: 312px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+
+}
+
+/*Username Components*/
+#LabelUsername {
+    position: absolute;
+    width: 95px;
+    height: 22px;
+    left: 75px;
+    top: 343px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxUsername {
+    position: absolute;
+    width: 447px;
+    height: 48px;
+    left: 60px;
+    top: 370px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#usernameValidator {
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 85px;
+    top: 431px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+}
+
+/*Password Components*/
+#LabelPassword {
+    position: absolute;
+    width: 91px;
+    height: 22px;
+    left: 75px;
+    top: 457px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxPassword {
+    position: absolute;
+    width: 447px;
+    height: 48px;
+    left: 60px;
+    top: 484px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#passwordValidator {
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 85px;
+    top: 545px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+
+}
+
+/*Confirm Password Components*/
+#LabelConfirmPassword {
+    position: absolute;
+    width: 166px;
+    height: 22px;
+    left: 75px;
+    top: 571px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+#TextBoxConfirmPassword {
+    position: absolute;
+    width: 447px;
+    height: 48px;
+    left: 60px;
+    top: 598px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+#confirmpasswordValidator {
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 85px;
+    top: 659px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+}
+#comparepasswordValidator {
+    position: absolute;
+    width: 186px;
+    height: 18px;
+    left: 85px;
+    top: 659px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FF3C47;
+}
+
+/*Register Button Component*/
+#ButtonRegister {
+    position: absolute;
+    width: 442px;
+    height: 48px;
+    left: 60px;
+    top: 712px;
+
+    color:black;
+    border-color:transparent;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*Hyperlink*/
+#HyperLink {
+    position: absolute;
+    width: 185px;
+    height: 18px;
+    left: 196px;
+    top: 795px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+
+}
+
+
+
+

@@ -6,6 +6,13 @@
 <head runat="server">
     <title>Property Tracking System</title>
     <link rel = "stylesheet" type = "text/css" href = "requestitemstyle.css">
+    <script type="text/javascript" >
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -40,12 +47,12 @@
 
                 <%-- Lastname label and textbox component --%>
                 <asp:Label ID="LabelLastname" runat="server" Text="Lastname"></asp:Label>
-                <asp:TextBox ID="TextBoxLastname" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:TextBox ID="TextBoxLastname" runat="server" autocomplete="off" Enabled="false"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="lastnameValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxLastname"></asp:RequiredFieldValidator>
 
                 <%-- Item code label and textbox component --%>
                 <asp:Label ID="LabelItemcode" runat="server" Text="Item Code"></asp:Label>
-                <asp:TextBox ID="TextBoxItemcode" runat="server" ReadOnly="true"></asp:TextBox>
+                <asp:TextBox ID="TextBoxItemcode" runat="server" ReadOnly="true" Enabled="false"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="itemcodeValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxItemcode"></asp:RequiredFieldValidator>
 
                 <%-- Quantity label and dropdown component --%>
@@ -60,7 +67,7 @@
 
                 <%-- Firstname label and textbox component --%>
                 <asp:Label ID="LabelFirstname" runat="server" Text="Firstname"></asp:Label>
-                <asp:TextBox ID="TextBoxFirstname" runat="server" autocomplete="off"></asp:TextBox>
+                <asp:TextBox ID="TextBoxFirstname" runat="server" autocomplete="off" Enabled="false"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="firstnameValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxFirstname"></asp:RequiredFieldValidator>
 
                 <%-- Return Time label and calendar component --%>
@@ -70,7 +77,7 @@
 
                 <%-- Trans No. label and textbox component --%>
                 <asp:Label ID="LabelTransno" runat="server" Text="Trans No."></asp:Label>
-                <asp:TextBox ID="TextBoxTransno" runat="server" autocomplete="off" AutoPostBack="true"></asp:TextBox>
+                <asp:TextBox ID="TextBoxTransno" runat="server" autocomplete="off" AutoPostBack="true" Enabled="false"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="transnoValidator" runat="server"  ErrorMessage="Required" EnableClientScript="false" ControlToValidate="TextBoxTransno"></asp:RequiredFieldValidator>
 
                 <%-- Not yet Registered using hyperlink of asp --%>

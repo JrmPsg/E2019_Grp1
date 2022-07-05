@@ -1,0 +1,744 @@
+﻿/*Yung buong header sa taas na parang div*/
+body {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
+#form1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #464646;
+}
+
+header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 61px;
+    background: #3B3B3B;
+}
+
+#PanelContent {
+    position: absolute;
+    width: 1185px;
+    height: 607px;
+    left: 255px;
+    top: 62px;
+
+}
+
+/*Yung title na Property Tracking System label component sa c#*/
+#LabelTitle {
+    position: absolute;
+    left: 3.82%;
+    top: 34.43%;
+    bottom: 36.07%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+}
+/*Logout Button natin*/
+#ButtonLogout {
+    position:absolute;
+    width:91px;
+    height:26.63px;
+    left:86.39%;
+    right:7.29%;
+    top:27.87%;
+    bottom:28.47%;
+
+    background:#D9D9D9;
+    border-radius:14.8px;
+}
+/*Ito yung para sa Navigation Menu na nasa gilid*/
+#navigation {
+    position: absolute;
+    width: 255px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    
+    background: #8DF8FF;
+    border-radius: 0px;
+}
+#ButtonDashboard {
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 91px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+    right: 1293px;
+    bottom: 912px;
+}
+#ButtonRequestitem {
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 137px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonItemstools{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 183px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonBorrowedhistory{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 229px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+#ButtonBorrowers{
+    position: absolute;
+    width: 245px;
+    height: 37px;
+    left: 0px;
+    top: 275px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    border-radius: 0px 20px 20px 0px;
+    color: #000000;
+}
+
+/*
+    Registration Form Label
+*/
+
+#LabelRegistrationform{
+    position: absolute;
+    width: 317px;
+    height: 42px;
+    left: 314px;
+    top: 94px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+
+}
+
+/*
+    Section Content na ating parang div na section or something
+*/
+#SectionContent{
+    position: absolute;
+    width: 1067px;
+    height: 486px;
+    left: 314px;
+    top: 160px;
+
+    background: rgba(88, 88, 88, 0.99);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/*
+    Personal Information Label
+*/
+#LabelPersonalInfo {
+    position: absolute;
+    width: 211px;
+    height: 24px;
+    left: 46px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+}
+
+/*
+    Lastname Label and Textbox
+*/
+#LabelLastname{
+    position: absolute;
+    width: 96px;
+    height: 22px;
+    left: 91px;
+    top: 63px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxLastname{
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 90px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Type of Client Label and Textbox
+*/
+
+#LabelClienttype{
+    position: absolute;
+    width: 131px;
+    height: 22px;
+    left: 439px;
+    top: 63px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+#TextBoxClienttype{
+    position: absolute;
+    width: 271px;
+    height: 48px;
+    left: 425px;
+    top: 90px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    ID number Label and Textbox
+*/
+
+#LabelId{
+    position: absolute;
+    width: 102px;
+    height: 22px;
+    left: 735px;
+    top: 63px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+#TextBoxId{
+    position: absolute;
+    width: 262px;
+    height: 48px;
+    left: 721px;
+    top: 90px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Firstname Label and Textbox
+*/
+#LabelFirstname {
+    position: absolute;
+    width: 97px;
+    height: 22px;
+    left: 91px;
+    top: 167px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxFirstname {
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 194px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+/*
+    Department Label and Textbox
+*/
+
+#LabelDepartment {
+    position: absolute;
+    width: 115px;
+    height: 22px;
+    left: 438px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxDepartment {
+    position: absolute;
+    width: 559px;
+    height: 48px;
+    left: 424px;
+    top: 195px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Contact Number Label and Textbox
+*/
+
+#LabelContactno {
+    position: absolute;
+    width: 154px;
+    height: 22px;
+    left: 91px;
+    top: 271px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxContactno {
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 74px;
+    top: 298px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Course / Section Label and Textbox
+*/
+
+#LabelCourse{
+    position: absolute;
+    width: 145px;
+    height: 22px;
+    left: 436px;
+    top: 274px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#TextBoxCourse{
+    position: absolute;
+    width: 298px;
+    height: 48px;
+    left: 425px;
+    top: 301px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+/*
+    Gender Label and Textbox
+*/
+
+#LabelGender {
+    position: absolute;
+    width: 75px;
+    height: 22px;
+    left: 772px;
+    top: 274px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+#DropDownListGender {
+    position: absolute;
+    width: 227px;
+    height: 48px;
+    left: 756px;
+    top: 298px;
+
+    color:white;
+    padding-left:29px;
+    box-sizing:border-box;
+    border-color:transparent;
+    background: rgba(138, 138, 138, 0.18);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Hyperlink nung papuntang ahhhh request item pag already registered na si user or kung sino mang magborrow
+*/
+
+#HyperLink {
+    position: absolute;
+    width: 135px;
+    height: 17px;
+    left: 91px;
+    top: 410px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+
+}
+
+/*
+    Register Button
+*/
+
+#ButtonRegister {
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    left: 582px;
+    top: 392px;
+
+    background: rgba(255, 255, 255, 0.84);
+    border-color:transparent;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*
+    Cancel Button para magclear nalang siguro mga data na nandun ahhahaha
+*/
+
+#ButtonCancel {
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    left: 793px;
+    top: 392px;
+
+    background: rgba(0, 0, 0, 0.42);
+    border-color:transparent;
+    color:#FFFFFF;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/**************************************************************
+    All Required field validators na gagamitin natin sa ating mga textbox
+    para naman kahit paano mavalidate sila ahhaahaha
+***************************************************************/
+
+/*
+    Lastname Validator
+*/
+
+#lastnameValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 91px;
+    top: 143px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+
+/*
+    Client type Validator
+*/
+
+#clienttypeValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 445px;
+    top: 143px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}
+
+/*
+    ID number Validator
+*/
+#idValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 741px;
+    top: 143px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+
+/*
+    Firstname Validator
+*/
+
+#firstnameValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 92px;
+    top: 247px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+
+/*
+    Contact Number Validator
+*/
+
+#regexValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 91px;
+    top: 352px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}
+
+/*
+    Course / Section Validator
+*/
+
+#courseValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 444px;
+    top: 354px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+}
+
+/*
+    Gender Validator
+*/
+
+#genderValidator {
+    position: absolute;
+    width: 57px;
+    height: 15px;
+    left: 776px;
+    top: 350px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FF000F;
+
+}

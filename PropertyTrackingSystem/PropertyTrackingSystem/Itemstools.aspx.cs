@@ -22,7 +22,8 @@ namespace PropertyTrackingSystem
             {
                 if (Session["Username"] != null)
                 {
-                    gridData(); 
+                    gridData();
+                    autoGenerateNumber();
                 }
                 else
                 {
@@ -235,11 +236,33 @@ namespace PropertyTrackingSystem
                 
             }
         }
+
         //Logout Button
         protected void ButtonLogout_Click(object sender, EventArgs e)
         {
             Session.RemoveAll();
+            Session["Username"] = null;
             Response.Redirect("Login.aspx");
+        }
+
+        //Para auto generated sana yung ating transaction numberrrr hayyyyyyyy gusto ko pizzzaaaa with siomaiiiii anddddd anddddd steakkkkkkk
+        public void autoGenerateNumber()
+        {
+            var nums = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; //Mga numbers natin
+            var chars = new char[8];
+            var random = new Random();
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                chars[i] = nums[random.Next(nums.Length)];
+            }
+
+            string finalstring = new string(chars);
+            //TextB.Text = finalstring;
+
+            TextBox itemcode = GridViewTables.FooterRow.FindControl("txtItemCodeFooter") as TextBox;
+
+            itemcode.Text = finalstring; //Then lagay ang generated item code dito
         }
     }
 }

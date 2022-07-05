@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\c#</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>06/15/2022 08:47:18</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>06/15/2022 08:47:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>03/10/2016 14:26:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>03/09/2016 12:00:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>03/09/2016 11:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/PropertyTrackingSystem.dll">
+      <publishTime>07/04/2022 18:53:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="Borrowedhistory.aspx">
+      <publishTime>07/04/2022 15:46:38</publishTime>
+    </File>
+    <File Include="Borrowedhistorystyle.css">
+      <publishTime>07/04/2022 15:45:16</publishTime>
+    </File>
+    <File Include="Borrower.aspx">
+      <publishTime>07/04/2022 16:27:16</publishTime>
+    </File>
+    <File Include="Borrowerstyle.css">
+      <publishTime>07/04/2022 16:26:55</publishTime>
+    </File>
+    <File Include="Dashboard.aspx">
+      <publishTime>07/04/2022 15:58:52</publishTime>
+    </File>
+    <File Include="dashboardstyle.css">
+      <publishTime>07/04/2022 16:24:30</publishTime>
+    </File>
+    <File Include="Image/add.png">
+      <publishTime>06/26/2022 08:08:36</publishTime>
+    </File>
+    <File Include="Image/close.png">
+      <publishTime>06/26/2022 08:09:28</publishTime>
+    </File>
+    <File Include="Image/delete.png">
+      <publishTime>06/26/2022 08:05:57</publishTime>
+    </File>
+    <File Include="Image/save.png">
+      <publishTime>06/26/2022 08:07:37</publishTime>
+    </File>
+    <File Include="Image/update.png">
+      <publishTime>06/26/2022 08:03:22</publishTime>
+    </File>
+    <File Include="Itemstools.aspx">
+      <publishTime>07/04/2022 16:59:49</publishTime>
+    </File>
+    <File Include="Itemstoolstyle.css">
+      <publishTime>07/04/2022 16:00:07</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>07/03/2022 18:54:40</publishTime>
+    </File>
+    <File Include="Loginstyle.css">
+      <publishTime>07/03/2022 14:48:15</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/15/2022 08:47:19</publishTime>
+    </File>
+    <File Include="Registration.aspx">
+      <publishTime>07/04/2022 17:49:40</publishTime>
+    </File>
+    <File Include="Registrationstyle.css">
+      <publishTime>07/04/2022 17:47:11</publishTime>
+    </File>
+    <File Include="RequestItem.aspx">
+      <publishTime>07/04/2022 17:35:50</publishTime>
+    </File>
+    <File Include="requestitemstyle.css">
+      <publishTime>07/04/2022 16:06:24</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>06/15/2022 08:47:19</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>06/15/2022 08:47:18</publishTime>
+    </File>
+    <File Include="Signup.aspx">
+      <publishTime>07/03/2022 15:45:37</publishTime>
+    </File>
+    <File Include="Signupstyle.css">
+      <publishTime>07/03/2022 11:16:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/04/2022 18:53:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
