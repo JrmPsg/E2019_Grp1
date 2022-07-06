@@ -18,11 +18,13 @@ namespace PropertyTrackingSystem
         //string connectString = @"Data Source=LAPTOP-RBS68QBU;Initial Catalog=Property;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 if (Session["Username"] != null)
                 {
                     dropdownData();
+                    quantityColor();
+                    itemsColor();
                     autoGenerateNumber(); 
                 }
                 else
@@ -67,6 +69,24 @@ namespace PropertyTrackingSystem
             Response.Redirect("Borrower.aspx");
         }
        
+        //Color ng mga items sa dropdownlist ifunction ko nalang sana gumana
+        public void quantityColor()
+        {
+            for(int i = 0;i < DropDownListQuantity.Items.Count; i++)
+            {
+                DropDownListQuantity.Items[0].Attributes.Add("class", "col");
+                DropDownListQuantity.Items[i].Attributes.Add("class", "col");
+            }
+        }
+
+        public void itemsColor()
+        {
+            for(int i = 0;i < DropDownListRequesteditem.Items.Count; i++)
+            {
+                DropDownListRequesteditem.Items[0].Attributes.Add("class", "col");
+                DropDownListRequesteditem.Items[i].Attributes.Add("class", "col");
+            }
+        }
         //Ifill or populate muna natin yung dropdownlist na yun hahhahahha hayyyyyyyy buhayyyyyyyy whoooooo need ko magmeryendaaa gusto ko meryendaaaaaa
         public void dropdownData()
         {
@@ -87,7 +107,9 @@ namespace PropertyTrackingSystem
                         sqlCon.Close();
                     }
                 }
+                
                 DropDownListRequesteditem.Items.Insert(0, new ListItem("--Select Items--", "0"));
+                itemsColor();
             }
             catch (Exception)
             {
@@ -100,7 +122,10 @@ namespace PropertyTrackingSystem
         //Pag gumana ito imark ko as readonly yung item code textbox boommmm panessss
         protected void DropDownListRequesteditem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selecteditemDetail(); //Dito ko ito ipapasok para all goods ahahhahahah
+            selecteditemDetail();
+            //Dito ko ito ipapasok para all goods ahahhahahah
+            itemsColor();
+            quantityColor();
         }
 
         public void selecteditemDetail()
@@ -131,13 +156,13 @@ namespace PropertyTrackingSystem
                     int q = Convert.ToInt32(ds.Tables[0].Rows[0]["quantity"]); //So using convert macoconvert ko ang value ng quantity to integer which is annoying talaga ahahha
                     DropDownListQuantity.Items.Clear(); //Clear muna natin lahat to prevent appending sa previous na ano ahhh items ahahahha
                     DropDownListQuantity.Items.Insert(0, new ListItem("--Select Items--", "0"));
-
                     //Kung equal siya sa zero edi lugi out of stock ganunnn
                     //Since may select items dun ako nilagay subukan ko siya imanipulate as in update
                     if (q==0)
                     {
                         DropDownListQuantity.Items.Clear();
-                        DropDownListQuantity.Items.Insert(0, new ListItem("--Out of Stock","0"));
+                        DropDownListQuantity.Items.Insert(0, new ListItem("--Out of Stock--","0"));
+                        DropDownListQuantity.Items[0].Attributes.Add("class", "col"); //Para lang ito sa index 0
                     }
                     else
                     {
@@ -146,6 +171,9 @@ namespace PropertyTrackingSystem
                             //So bale ang logic ko is ipasok ang laman sa ating dropdownlist gamit ito value
                             DropDownListQuantity.Items.Insert(i, new ListItem(i.ToString(), i.ToString()));
 
+                            //Then dito ko rin itry iadd yung ating attributes with class for css style
+                            //Para habang inaadd ehh ayun nailalagay agad ang attributes niya base sa css file
+                            quantityColor();
                         }
                     }
                 }
@@ -193,6 +221,9 @@ namespace PropertyTrackingSystem
             {
                 Response.Write("<script>alert('ID Number not found')</script>");
             }
+
+            itemsColor();
+            quantityColor();
         }
 
         //Ito ay para sa pag insert ng data sa tb_borrowhistory sa ating mahal na database ahahhahahah ahahhaha ahahhaha
@@ -231,6 +262,9 @@ namespace PropertyTrackingSystem
                         cmd2.ExecuteNonQuery();
                         sqlCon.Close();
 
+                        itemsColor();
+                        quantityColor();
+
                         if (IsPostBack)
                         {
                             //Clear ko sila lahat
@@ -243,16 +277,16 @@ namespace PropertyTrackingSystem
                             TextBoxReturntime.Text = "";
                             TextBoxItemcode.Text = "";
                             Response.Write("<script>alert('Data Added Successfully')</script>");
-                        }
-                        else
-                        {
-                            Response.Write("<script>alert('Please fill up necessary informations')</script>");
+
+                            itemsColor();
+                            quantityColor();
                         }
                     }
                 }
                 else
                 {
-
+                    itemsColor();
+                    quantityColor();
                 }
             }
             catch (Exception ex)

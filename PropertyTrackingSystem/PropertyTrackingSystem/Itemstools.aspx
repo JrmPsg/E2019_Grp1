@@ -67,7 +67,7 @@
                             <asp:TextBox ID="txtItemCode" runat="server" Text='<%#Eval("itemcode") %>' Enabled="false"></asp:TextBox>
                         </EditItemTemplate>
                         <FooterTemplate>
-                             <asp:TextBox ID="txtItemCodeFooter" runat="server" Enabled="false"></asp:TextBox>
+                             <asp:TextBox ID="txtItemCodeFooter" runat="server" Enabled="false" AutoPostBack="true"></asp:TextBox>
                         </FooterTemplate>
                     </asp:TemplateField>
 

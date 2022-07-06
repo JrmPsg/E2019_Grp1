@@ -523,6 +523,11 @@ header {
     border-radius: 15px;
 }
 
+.col {
+    background-color: #3B3B3B;
+    color:white;
+}
+
 /*
     Hyperlink nung papuntang ahhhh request item pag already registered na si user or kung sino mang magborrow
 */

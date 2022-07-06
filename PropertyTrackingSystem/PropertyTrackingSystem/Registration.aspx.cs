@@ -19,7 +19,7 @@ namespace PropertyTrackingSystem
         {
             if (Session["Username"] != null)
             {
-                //No code here ahhahahaha well ganun talaga registration ehh
+                colGender();
             }
             else
             {
@@ -120,6 +120,15 @@ namespace PropertyTrackingSystem
             Session.RemoveAll();
             Session["Username"] = null;
             Response.Redirect("Login.aspx");
+        }
+
+        //Lagyan ng color yung dropdown list natin ahahhahhahahaha
+        public void colGender()
+        {
+            for(int i = 0;i < DropDownListGender.Items.Count; i++)
+            {
+                DropDownListGender.Items[i].Attributes.Add("class", "col");
+            }
         }
 
         protected void ButtonCancel_Click(object sender, EventArgs e)

@@ -62,7 +62,7 @@ header {
     left: 0px;
     top: 0px;
     
-    background: #8DF8FF;
+    background: #A7CAFF;
     border-radius: 0px;
 }
 #ButtonDashboard {
@@ -170,9 +170,9 @@ header {
 */
 #LabelSearch{
     position: absolute;
-    width: 85px;
+    width: 115px;
     height: 18px;
-    left: 792px;
+    left: 762px;
     top: 97px;
 
     font-family: 'Inter';
