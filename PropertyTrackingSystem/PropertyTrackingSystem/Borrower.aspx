@@ -60,7 +60,7 @@
                             <asp:Label runat="server" Text='<%#Eval("id") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtid" runat="server" Text='<%#Eval("id") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtid" runat="server" Text='<%#Eval("id") %>' ReadOnly="true"></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
